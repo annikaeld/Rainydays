@@ -253,18 +253,3 @@ input[type="text"] {
     color: #0A3641;
 }
 
-/*mobile*/
-
-@media (max-width:590px){
-    nav a{
-        display: block;
-
-    }
-
-    nav{ 
-        position: absolute;
-        background: #E4F5FB;
-        top: 0px;
-        left: 0px;
-
-    }
