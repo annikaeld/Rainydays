@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rainydays | Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="link"
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Roboto+Mono&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><div id="logo"></div></a>
+      <nav>
+        <ul id="navigation">
+            <li>Our Jackets</a></li>
+            <ul id="choose-gender">
+              <li><a href="men.html">Men</a></li>
+              <li><a href="women.html">Women</a></li>
+            </ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="highlight-nav">Contact us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1>Welcome to customer service</h1>
+    <h5>Contact us:</h5>
+    <form action="message-sent.php" method="POST">
+      <fieldset>
+        <legend>Your email adress</legend>
+        <label for="email">Your email adress</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form__input"
+          required
+        />
+      </fieldset>
+      <fieldset>
+        <legend>Your message</legend>
+        <textarea
+          id="message"
+          name="message"
+          type="text"
+          rows="5"
+          cols="30"
+          class="form__input"
+        ></textarea>
+      </fieldset>
+      <input type="submit" value="Send" />
+    </form>
+  </body>
+</html>

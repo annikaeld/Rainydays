@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rainydays | Check-Out</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="link"
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Roboto+Mono&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><div id="logo"></div></a>
+      <nav>
+        <ul id="navigation">
+            <li>Our Jackets</a></li>
+            <ul id="choose-gender">
+              <li><a href="men.html">Men</a></li>
+              <li><a href="women.html">Women</a></li>
+            </ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1>Welcome to customer service</h1>
+    <h5>Contact us:</h5>
+    <form action="buy-success.php" method="POST">
+      <fieldset>
+        <legend>Your e-mail adress</legend>
+        <label for="e-mail">Your e-mail adress</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form__input"
+          required
+        />
+      </fieldset>
+      <fieldset>
+        <legend>Card Information</legend>
+        <label for="ccn">Credit Card Number:</label>
+        <input
+          id="ccn"
+          type="tel"
+          inputmode="numeric"
+          pattern="[0-9\s]{13,19}"
+          autocomplete="cc-number"
+          maxlength="19"
+          placeholder="xxxx xxxx xxxx xxxx"
+          required
+        />
+      </fieldset>
+      <fieldset>
+        <legend>MM/YY</legend>
+        <input
+          type="date"
+          name="begin"
+          placeholder="mm-yy"
+          value="mm/yy"
+          min="01-23"
+          max="12-50"
+          class="form__input"
+          required
+        />
+      </fieldset>
+      <fieldset>
+        <legend>CVC</legend>
+        <input
+          id="cvc"
+          name="cvc"
+          type="tel"
+          class="form__input"
+          autocomplete="cvc-number"
+          type="number"
+          maxlength="3"
+          pattern="([0-9]|[0-9]|[0-9])"
+          required
+        />
+      </fieldset>
+      <input type="submit" value="Buy Now" />
+    </form>
+  </body>
+</html>
