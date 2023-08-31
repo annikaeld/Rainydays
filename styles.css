@@ -15,40 +15,122 @@ header{
 
 }
 
-#navigation{
+.navbar{
     background-color: #E4F5FB;
     font-family: 'jost', sans-serif;
     font-size: 20px;
     padding-left: 0px;
+    overflow: hidden;
+    
 
 }
 
-#navigation .highlight-nav{
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+  }
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color:  #0A3641;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color:  #0A3641;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover {
+    font-weight: bold;
+  }
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E4F5FB;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: #0A3641;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+
+/* Add background color and styling to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #fff;
+    font-weight: bold;
+  }
+  
+ /* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+.navbar .highlight-nav{
     font-weight: bold;
     padding-left: 0px;
 }
 
-nav2, #choose-gender{
-    display: none;
-}
-
-nav, nav2{
+nav{
     position: static;
     background-color: #E4F5FB;
 }
 
-#choose-gender:checked ~ nav2{
-    display: block;
-}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #E4F5FB;
+    color: #0A3641;
+  }
+
+  li a {
+    display: inline;
+    color: #0A3641;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #fff;
+    font-weight: bold;
+  }
+
 
 nav a{
     display: inline-block;
-}
-
-.hamburger-icon{
-    display: none;
-}
-    
+    text-decoration: none;
+}    
     
 h1{
     font-family: 'Roboto Mono', monospace;
@@ -183,6 +265,6 @@ input[type="text"] {
         position: absolute;
         background: #E4F5FB;
         top: 0px;
-        left: 30px;
+        left: 0px;
 
     }

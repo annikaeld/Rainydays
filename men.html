@@ -16,21 +16,28 @@
       rel="stylesheet"
     />
     <link href="styles.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/9283a1213e.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
       <a href="index.html"><div id="logo"></div></a>
-      <nav id="navigation">
-        <ul>
-          <li class="highlight-nav">Our Jackets</a></li>
-          <ul id="choose-gender">
-            <li><a href="men.html">Men</a></li>
-            <li><a href="women.html">Women</a></li>
-          </ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact us</a></li>
-        </ul>
-      </nav>
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            Our Jackets
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="men.html">Men</a>
+            <a href="women.html">Women</a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact us</a>
+      </div>
     </header>
     <section class="men">
       <h1>Men</h1>
