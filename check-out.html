@@ -17,76 +17,64 @@
     />
     <link href="styles.css" rel="stylesheet" />
     <script
-    src="https://kit.fontawesome.com/9283a1213e.js"
-    crossorigin="anonymous"
-  ></script>
+      src="https://kit.fontawesome.com/9283a1213e.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
       <a href="index.html"><div id="logo"></div></a>
-      <nav id="navigation">
-        <ul>
-          <li id="choose-gender">Our Jackets</a></li>
-            <li><a href="men.html">Men</a></li>
-            <li><a href="women.html">Women</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact us</a></li>
-        </ul>
-      </nav>
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            Our Jackets
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="men.html">Men</a>
+            <a href="women.html">Women</a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact us</a>
+      </div>
     </header>
-    <h1>Welcome to customer service</h1>
-    <h5>Contact us:</h5>
+    <h1>Check-Out</h1>
     <form action="buy-success.php" method="POST">
       <fieldset>
-        <legend>Your e-mail adress</legend>
-        <label for="e-mail">Your e-mail adress</label>
+        <label for="e-mail">Your email adress</label>
         <input
-          type="email"
-          name="email"
           id="email"
+          name="email"
+          type="email"
           class="form__input"
           required
         />
-      </fieldset>
-      <fieldset>
-        <legend>Card Information</legend>
-        <label for="ccn">Credit Card Number:</label>
+
+        <label for="ccn">Credit Card Number:<br /></label>
         <input
           id="ccn"
-          type="tel"
-          inputmode="numeric"
-          pattern="[0-9\s]{13,19}"
-          autocomplete="cc-number"
-          maxlength="19"
-          placeholder="xxxx xxxx xxxx xxxx"
-          required
-        />
-      </fieldset>
-      <fieldset>
-        <legend>MM/YY</legend>
-        <input
-          type="date"
-          name="begin"
-          placeholder="mm-yy"
-          value="mm/yy"
-          min="01-23"
-          max="12-50"
+          name="ccn"
+          type="ccn"
           class="form__input"
-          required
+          maxlength="16"
         />
-      </fieldset>
-      <fieldset>
-        <legend>CVC</legend>
+        <label for="mm/yy">MM/YY<br /> </label>
+        <input
+          id="mm/yy"
+          name="mm/yy"
+          class="form__input"
+          type="tel"
+          maxlength="4"
+        />
+
+        <label for="cvc">CVC</label>
         <input
           id="cvc"
           name="cvc"
-          type="tel"
           class="form__input"
-          autocomplete="cvc-number"
-          type="number"
+          type="tel"
           maxlength="3"
-          pattern="([0-9]|[0-9]|[0-9])"
-          required
         />
       </fieldset>
       <input type="submit" value="Buy Now" />

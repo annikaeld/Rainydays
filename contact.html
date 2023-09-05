@@ -40,31 +40,26 @@
       </div>
     </header>
     <h1>Welcome to customer service</h1>
-    <h5>Contact us:</h5>
     <form action="message-sent.php" method="POST">
       <fieldset>
-        <legend>Your email adress</legend>
+        <legend>Contact us:</legend>
         <label for="email">Your email adress</label>
         <input
-          type="email"
-          name="email"
           id="email"
+          name="email"
+          type="email"
           class="form__input"
           required
         />
-      </fieldset>
-      <fieldset>
-        <legend>Your message</legend>
+        <label for="message">Your message:</label>
         <textarea
           id="message"
           name="message"
           type="text"
-          rows="5"
-          cols="30"
           class="form__input"
         ></textarea>
+        <input type="submit" value="Send" />
       </fieldset>
-      <input type="submit" value="Send" />
     </form>
   </body>
 </html>

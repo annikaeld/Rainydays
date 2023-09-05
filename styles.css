@@ -21,14 +21,7 @@ header{
     font-size: 20px;
     padding-left: 0px;
     overflow: hidden;
-    
-
 }
-
-/* Navbar container */
-.navbar {
-    overflow: hidden;
-  }
 
 /* Links inside the navbar */
 .navbar a {
@@ -58,10 +51,13 @@ header{
     margin: 0; /* Important for vertical align on mobile phones */
   }
 
-/* Add a red background color to navbar links on hover */
+/* Add weight to navbar links on hover */
 .navbar a:hover {
     font-weight: bold;
   }
+.dropbtn:hover{
+  font-weight: bold;
+}
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
@@ -103,29 +99,6 @@ nav{
     position: static;
     background-color: #E4F5FB;
 }
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #E4F5FB;
-    color: #0A3641;
-  }
-
-  li a {
-    display: inline;
-    color: #0A3641;
-    padding: 8px 16px;
-    text-decoration: none;
-  }
-
-/* Change the link color on hover */
-li a:hover {
-    background-color: #fff;
-    font-weight: bold;
-  }
-
 
 nav a{
     display: inline-block;
@@ -215,21 +188,29 @@ h8{
 }
 
 /*about*/
+
 .us{
-    background-image: url("images/couple-traveling-together-country-side.jpg");
-    height: 554px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
+    width: 40vw;
+    height: 30vw;
+    object-fit: cover;
 }
 
-.us p{
+.floated-left {
+    float: left;
+    position: relative;
+    top: 10px;
+    left: 180px;
+}
+
+.floated-right{
+    float: right;
     font-family: 'Jost', sans-serif;
     font-size: 23px;
     text-align: left;
-    color: #000
-
+    color: #000;
+    position: relative;
+    top: 10px;
+    right: 120px;
 }
 
 
