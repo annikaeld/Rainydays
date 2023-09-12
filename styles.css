@@ -181,11 +181,13 @@ h8{
 }
 
 .product-list{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height: 40vw;
-    flex-grow: 1;
+    display: grid;
+    height: 10vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-gap: 0.1em;
+    max-width: 1000px;
+    
 }
 
 .product{
@@ -253,7 +255,6 @@ img {
 
 /*contact*/
 
-
 .form__input{
     display: block;
 }
@@ -274,10 +275,6 @@ input[type="text"] {
     height: 100%;
   }
 
-  footer{
-    background-color: #E4F5FB;
-    color: #0A3641;
-}
 
 form{
     color: #868585;
@@ -287,8 +284,49 @@ form{
 .contact{
     max-width: 1000px;
     margin: 50px auto;
-    text-align: center;
   }
+
+  
+
+  footer{
+    background-color: #E4F5FB;
+    color: #0A3641;
+}
+
+/*products*/
+
+.product-specific{
+    display: flex;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.product-specific > *{
+    flex: 1;
+}
+
+.product-specific__details{
+    padding: 0px 30px;
+}
+
+.product-specific__details a{
+    display: block;
+    width: 25%;
+    margin:auto;
+}
+
+.product-image{
+    width: 100%;
+}
+
+/*check out*/
+
+.check-out {
+    background: #F5F5F5;
+}
+
+
+
 
 @media only screen and (min-width:600px){
     .product-list{

@@ -40,43 +40,55 @@
       </div>
     </header>
     <h1>Check-Out</h1>
-    <form action="buy-success.php" method="POST">
-      <fieldset>
-        <label for="e-mail">Your email adress</label>
+    <main class="product-specific">
+      <section>
+        <img
+          src="images/jacketes/jacket-white.jpg"
+          alt="White Jacket"
+          class="product-image"
+        />
+      </section>
+    <form class="check-out" action="buy-success.php" method="POST">
+      
+        <label for="e-mail"></label>
         <input
           id="email"
           name="email"
+          placeholder="Your email address"
           type="email"
           class="form__input"
           required
         />
 
-        <label for="ccn">Credit Card Number:<br /></label>
+        <label for="ccn"><br /></label>
         <input
           id="ccn"
           name="ccn"
+          placeholder="Credit Card Number"
           type="ccn"
           class="form__input"
           maxlength="16"
         />
-        <label for="mm/yy">MM/YY<br /> </label>
+        <label for="mm/yy"><br /> </label>
         <input
           id="mm/yy"
           name="mm/yy"
+          placeholder="MM/YY"
           class="form__input"
           type="tel"
           maxlength="4"
         />
 
-        <label for="cvc">CVC</label>
+        <label for="cvc"></label>
         <input
           id="cvc"
           name="cvc"
+          placeholder="CVC"
           class="form__input"
           type="tel"
           maxlength="3"
         />
-      </fieldset>
+      
       <input type="submit" value="Buy Now" class="cta" />
     </form>
   </body>
