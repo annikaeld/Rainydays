@@ -23,6 +23,17 @@ header{
     overflow: hidden;
 }
 
+.cta {
+    background-color: #F4C14F;opacity:0.8;
+    color: black;
+    font-size: 1em;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 6px 25px;
+    text-decoration: none;
+    border: 3px solid black
+}
 /* Links inside the navbar */
 .navbar a {
     float: left;
@@ -214,26 +225,26 @@ img {
 /*about*/
 
 .us{
-    max-width: 40vw;
-    height: auto;
-    object-fit: cover;
     font-family: 'Jost', sans-serif;
     font-size: 23px;
     text-align: left;
     color: #000;
-    top: 10px;
     float: left;
     margin: 2vw;
 }
 
 .about-us{
+    margin: 50px auto;
+    max-width: 1000px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .about-us > *{
     flex: 1;
+}
+
+.about-us-images {
+    width: 100%;
 }
 
 .product{
@@ -242,6 +253,7 @@ img {
 
 /*contact*/
 
+
 .form__input{
     display: block;
 }
@@ -249,16 +261,34 @@ img {
 input[type="text"] {
     padding: 10px;
     width: 100%;
+
   }
 
   input, select, textarea{
-    border: 1px solid #7D949D
+    border: 1px solid #7D949D;
+    margin: 10px 10px 10px 0px;
+    padding: 10px;
+  }
+
+  textarea{
+    height: 100%;
   }
 
   footer{
     background-color: #E4F5FB;
     color: #0A3641;
 }
+
+form{
+    color: #868585;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.contact{
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+  }
 
 @media only screen and (min-width:600px){
     .product-list{
