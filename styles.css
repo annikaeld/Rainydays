@@ -195,6 +195,10 @@ h5{
     margin: auto;
 }
 
+.product a{
+    text-decoration: none;
+    color: #000;
+}
 .product p{
     font-family:'Jost', sans-serif;
     margin: 0px;
@@ -228,9 +232,14 @@ h5{
     font-family: 'Jost', sans-serif;
     font-size: 23px;
     text-align: left;
+    margin-top: 0px;
+    padding-top: 0px;
     color: #000;
     float: left;
-    margin: 2vw;
+    margin-left: 2vw;
+}
+.us p{
+    margin-top: 0px;
 }
 
 .about-us{
@@ -282,20 +291,9 @@ input[type=submit]{
 form{
     color: #868585;
     font-family: 'Roboto Mono', monospace;
-}
+} 
 
-.contact div{
-    margin:0%;
-    border: none;
-    padding: 0%;
-}
 
-  
-
-  footer{
-    background-color: #E4F5FB;
-    color: #0A3641;
-}
 
 /*products*/
 
@@ -353,7 +351,10 @@ form{
     padding: 0px 0px 20px 0px;
 }
 
-
+footer{
+    background-color: #E4F5FB;
+    color: #0A3641;
+}
 
 @media only screen and (min-width:600px){
     .product-list{
@@ -379,7 +380,7 @@ form{
     /*contact*/
 
     .contact{
-            max-width: 35%;
+            max-width: 40%;
             margin: 50px auto;
           }
 
