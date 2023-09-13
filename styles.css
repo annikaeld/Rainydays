@@ -284,11 +284,6 @@ form{
     font-family: 'Roboto Mono', monospace;
 }
 
-.contact{
-    max-width: 35%;
-    margin: 50px auto;
-  }
-
   
 
   footer{
@@ -373,7 +368,15 @@ form{
     .product-specific--check-out{
         display: flex;
         align-items: center;
+    }
+
+        /*contact*/
+
+    .contact{
+            max-width: 35%;
+            margin: 50px auto;
+          }
 
 
-}
+
 
