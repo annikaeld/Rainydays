@@ -24,13 +24,13 @@ header{
 }
 
 .cta {
-    background-color: #F4C14F;opacity:0.8;
+    background-color: #F4C14F;
     color: black;
     font-size: 1em;
     font-family: 'Roboto Mono', monospace;
-    font-weight: bold;
+    font-weight:bolder;
     border-radius: 6px;
-    padding: 6px 25px;
+    padding: 1% 6%;
     text-decoration: none;
     border: 3px solid black
 }
@@ -134,11 +134,9 @@ h2{
 }
 
 h5{
-    font-family: 'Roboto', sans-serif;
-}
-
-h8{
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    font-size: 36px ;
 }
 
 .jackets-men {
@@ -182,28 +180,28 @@ h8{
 
 .product-list{
     display: grid;
-    height: 10vw;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr auto;
-    grid-gap: 0.1em;
-    max-width: 1000px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4px;
     
 }
 
+.product img{
+    width: 100%;
+  }
+
 .product{
     background-color: #F5F5F5;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.product p{
     font-family:'Jost', sans-serif;
+    margin: 0px;
     font-size: 26px;
     text-align: center;
 }
 
-.product-list 
-img {
-  max-height: 100%;
-  min-width: 100%;
-  object-fit: cover;
-  vertical-align: bottom;
-}
 
 /*women*/
 
@@ -257,24 +255,30 @@ img {
 
 .form__input{
     display: block;
-}
-
-input[type="text"] {
-    padding: 10px;
-    width: 100%;
-
-  }
-
-  input, select, textarea{
-    border: 1px solid #7D949D;
+    border: 2px solid #7D949D;
     margin: 10px 10px 10px 0px;
     padding: 10px;
-  }
+    width: 100%;
+    font-family: 'Roboto Mono', monospace;
+    box-sizing: border-box;
+}
 
-  textarea{
-    height: 100%;
-  }
+textarea {
+    resize: none;
+    height: 120px;
+}
 
+input[type=submit]{
+   cursor: pointer;
+   float: right;
+}
+
+.contact p{
+    font-family: 'Jost', sans-serif;
+    font-size: 23px;
+    color: #0A3641;
+    font-weight: bold;
+}
 
 form{
     color: #868585;
@@ -282,7 +286,7 @@ form{
 }
 
 .contact{
-    max-width: 1000px;
+    max-width: 35%;
     margin: 50px auto;
   }
 
@@ -295,29 +299,32 @@ form{
 
 /*products*/
 
+
+
 .product-specific{
     display: flex;
+    align-items: center;
     max-width: 1000px;
-    margin: 50px auto;
+    margin: auto;
 }
 
 .product-specific > *{
     flex: 1;
-}
-
-.product-specific__details{
-    padding: 0px 30px;
-}
-
-.product-specific__details a{
-    display: block;
-    width: 25%;
-    margin:auto;
-}
+    display: flex;
+    flex-direction: column;
+  }
 
 .product-image{
     width: 100%;
+
 }
+
+
+
+
+
+
+
 
 /*check out*/
 
@@ -325,6 +332,19 @@ form{
     background: #F5F5F5;
 }
 
+.check-out-sucess{
+    color:#0A3641;
+    text-align: center;
+    margin: auto;
+    width: 30%;
+    
+}
+
+.check-out-sucess p{
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    padding: 0px 0px 20px 0px;
+}
 
 
 
