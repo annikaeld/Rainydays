@@ -284,6 +284,12 @@ form{
     font-family: 'Roboto Mono', monospace;
 }
 
+.contact div{
+    margin:0%;
+    border: none;
+    padding: 0%;
+}
+
   
 
   footer{
@@ -376,6 +382,9 @@ form{
             max-width: 35%;
             margin: 50px auto;
           }
+
+
+        }
 
 
 
