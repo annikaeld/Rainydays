@@ -40,7 +40,8 @@
       </div>
     </header>
     <h1>Check-Out</h1>
-    <main class="product-specific">
+    
+    <main class="product-specific--check-out">
       <section>
         <img
           src="images/jacketes/jacket-white.jpg"
@@ -48,7 +49,9 @@
           class="product-image"
         />
       </section>
-    <form class="check-out" action="buy-success.php" method="POST">
+      <section class="check-out">
+    
+      <form class="check-out" action="buy-success.php" method="POST">
       
         <label for="e-mail"></label>
         <input
@@ -88,8 +91,9 @@
           type="tel"
           maxlength="3"
         />
-      
-      <input type="submit" value="Buy Now" class="cta" />
-    </form>
+        <a href="check-out-sucess.html" class="cta">Buy now</a>
+      </form>
+    </section>
+    
   </body>
 </html>

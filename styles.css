@@ -236,13 +236,11 @@ h5{
 .about-us{
     margin: 50px auto;
     max-width: 1000px;
-    display: flex;
-    flex-direction: column;
+    
+
 }
 
-.about-us > *{
-    flex: 1;
-}
+
 
 .about-us-images {
     width: 100%;
@@ -333,6 +331,13 @@ form{
     background: #F5F5F5;
 }
 
+.product-specific--check-out{
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+
 .check-out-sucess{
     color:#0A3641;
     text-align: center;
@@ -354,9 +359,20 @@ form{
         flex-direction: row;
     }
 
+    /*about*/
     .about-us{
+        display: flex;
         flex-direction: row;
     }
+
+    .about-us > *{
+        flex: 1;
+    }
+
+    /*check-out*/
+    .product-specific--check-out{
+        display: flex;
+        align-items: center;
 
 
 }
