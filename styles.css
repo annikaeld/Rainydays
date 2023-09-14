@@ -469,11 +469,11 @@ p.welcome-text {
 
 .men {
   background-image: url("images/low-angle-man-exploring-nature2.jpg");
-  height: 554px;
+  height: 280px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
+  background-position-x: left;
+  background-position-y: top;
 }
 
 .men h1 {
@@ -519,14 +519,14 @@ p.welcome-text {
 
 .women {
   background-image: url("images/karsten-winegeart-D4G1VIrg-Fc-unsplash2.jpg");
-  height: 554px;
+  height: 280px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
+  background-position-x: left;
+  background-position-y: top;
 }
 
-.women.h1 {
+.women h1 {
   font-family: 'Jost', sans-serif;
   font-size: 70px;
   text-align: left;
@@ -612,8 +612,9 @@ form {
   color: #0A3641;
   text-align: center;
   margin: auto;
-  width: 60vw;
-  padding-bottom: 30px;
+  width: 25vw;
+  min-width: 215px;
+  padding-bottom: 70px;
   display:block;
 }
 
@@ -750,8 +751,18 @@ footer {
 
   /*men*/
 
+  .men{
+    height: 554px;
+  }
+
   .product-list{
   grid-template-columns: repeat(3, 1fr);
+  }
+
+  /*women*/
+
+  .women{
+    height: 554px;
   }
 
   /*about*/
