@@ -485,8 +485,11 @@ p.welcome-text {
 
 .product-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   grid-gap: 4px;
+  max-width: 1000px;
+  margin: auto;
+
 
 }
 
@@ -747,8 +750,8 @@ footer {
 
   /*men*/
 
-  .product-list {
-    flex-direction: row;
+  .product-list{
+  grid-template-columns: repeat(3, 1fr);
   }
 
   /*about*/
@@ -798,4 +801,5 @@ footer {
     font-size: 4vh;
     padding-top: 20px;
   }
+  
 }
