@@ -1,392 +1,792 @@
-header{
-    font-family: 'Jost', sans-serif;
-    font-size: 2rem;
-    background-color: #ffffff;
-    color: #0A3641;
-    position: relative
+body {
+  margin: 0;
+  padding: 0
 }
 
-#logo{
-    background-image: url("images/logo/RainyDays_Logo.png");
-    height: 136px;
-    width: 254px;
-    background-size: cover;
-    background-repeat: no-repeat;
-
+header {
+  background-color: #ffffff;
+  position: relative;
 }
 
-.navbar{
-    background-color: #E4F5FB;
-    font-family: 'jost', sans-serif;
-    font-size: 20px;
-    padding-left: 0px;
-    overflow: hidden;
+.header-top {
+  display: flex;
+  position: relative;
+  margin-top: 10px;
+  height: 68.0px;
 }
 
-.cta {
-    background-color: #F4C14F;
-    color: black;
-    font-size: 1em;
-    font-family: 'Roboto Mono', monospace;
-    font-weight:bolder;
-    border-radius: 6px;
-    padding: 1% 6%;
-    text-decoration: none;
-    border: 3px solid black
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #E4F5FB;
 }
+
+#logo-top {
+  width: 100px;
+  margin-left: 8vw;
+  position: relative;
+  z-index: 3;
+  vertical-align: top;
+}
+
+#logo-bottom {
+  height: 16.5px;
+  width: 237.3px;
+  position: relative;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.topnav-search {
+  right: 1rem;
+  margin-top: 2.9rem;
+  padding-left: 10%;
+  display: none;
+}
+
+.topnav-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.topnav-icons>* {
+  padding: 0px 22px 5px 22px;
+}
+
+.topnav-icons a {
+  height: 1.5rem;
+}
+
+.topnav-icons a img {
+  height: 1.5rem;
+}
+
+#searchform {
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #000;
+  padding: 0px;
+  margin-right: 40px;
+  width: 220px;
+  height: 1.5rem;
+  background-image: url("images/icons/search-icon.svg");
+  background-repeat: no-repeat;
+  text-indent: 55px;
+  background-size: 1.4rem;
+}
+
+#menuToggle {
+  display: block;
+  position: relative;
+  margin-top: 4px;
+  z-index: 1;
+  user-select: none;
+}
+
+
+#menuToggle a {
+  text-decoration: none;
+  color: #000;
+}
+
+#menuToggle input {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -5px;
+  left: 18px;
+
+  cursor: pointer;
+
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin-bottom: 4.5px;
+  position: relative;
+  background: #000;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(1px, 1px);
+  background: #232323;
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(1px, 0px);
+}
+
+#menu {
+  position: absolute;
+  width: 70vw;
+  right: 0px;
+  margin: 0px 0 0 0px;
+  top: 49px;
+  padding: 10px;
+
+  background: #f5f5f5;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: scale(0, 0);
+  z-index: 8;
+}
+
+#menu li {
+  color: #0A3641;
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 20px 50px 20px;
+}
+
+#menu #closemenu {
+  background-image: url("images/icons/close-icon.svg");
+  background-position-x: right;
+  background-repeat: no-repeat;
+}
+
+#menuToggle input:checked~ul {
+  transform: none;
+}
+
+.accordion>input[name="collapse"] {
+  display: none;
+}
+
+.accordion .content {
+  overflow: hidden;
+  transition: 0.3s;
+  height: 0;
+  margin-left: 40px;
+}
+
+.accordion label {
+  cursor: pointer;
+}
+
+.accordion .handle label:after {
+  font-family: FontAwesome;
+  content: "\f107";
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 1em;
+  line-height: 1.556em;
+  vertical-align: middle;
+  transition: 0.4s;
+}
+
+.accordion>input[name="collapse"]:checked~.handle label:before {
+  transform: rotate(180deg);
+  transform-origin: center;
+  transition: 0.4s;
+}
+
+.accordion>input[name="collapse"]:checked~.content {
+  height: 120px;
+  transition: height 0.3;
+}
+
+.navbar {
+  font-family: 'jost', sans-serif;
+  font-size: 18px;
+  position: flex;
+  justify-content: flex-end;
+  padding-left: 227.8px;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  width: 100%;
+  z-index: 4;
+  display: none;
+}
+
 /* Links inside the navbar */
 .navbar a {
-    float: left;
-    font-size: 16px;
-    color:  #0A3641;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+  float: left;
+  color: #0A3641;
+  text-align: center;
+  padding: 6px 0px 1px 0px;
+  text-decoration: none;
+  width: 100px;
+  position: relative;
+  top: -1px;
+}
 
 /* The dropdown container */
 .dropdown {
-    float: left;
-    overflow: hidden;
-  }
+  float: left;
+  overflow: hidden;
+  width: 12rem;
+}
 
 /* Dropdown button */
 .dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color:  #0A3641;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
-  }
+  border: none;
+  outline: none;
+  color: #0A3641;
+  font-size: 18px;
+  padding: 5px 36px 3px 36px;
+  background-color: inherit;
+  font-family: inherit;
+  /* Important for vertical align on mobile phones */
+  margin: 0;
+  /* Important for vertical align on mobile phones */
+  margin-top: -1px;
+}
 
 /* Add weight to navbar links on hover */
 .navbar a:hover {
-    font-weight: bold;
-  }
-.dropbtn:hover{
+  font-weight: bold;
+}
+
+.dropbtn:hover {
   font-weight: bold;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #E4F5FB;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
+  display: none;
+  position: absolute;
+  background-color: #E4F5FB;
+  min-width: 130px;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+}
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    float: none;
-    color: #0A3641;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-  }
+  float: none;
+  color: #0A3641;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  width: 10vw;
+}
 
 /* Add background color and styling to dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #fff;
-    font-weight: bold;
-  }
-  
- /* Show the dropdown menu on hover */
+  background-color: #fff;
+  font-weight: bold;
+}
+
+/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-.navbar .highlight-nav{
-    font-weight: bold;
-    padding-left: 0px;
+  display: block;
 }
 
-nav{
-    position: static;
-    background-color: #E4F5FB;
+.navbar .highlight-nav {
+  font-weight: bold;
+  padding-left: 0px;
 }
 
-nav a{
-    display: inline-block;
-    text-decoration: none;
-}    
-    
-h1{
-    font-family: 'Roboto Mono', monospace;
-    text-transform: uppercase;
-    font-size: 40px;
-    text-align: center;
-    padding: 20px 10px; 
+nav {
+  position: static;
+  background-color: #E4F5FB;
 }
 
-h2{
-    font-family: 'Roboto Mono', monospace;
-    text-transform: uppercase;
-    font-size: 36px;
-    text-align: center;
-    padding: 20px 10px; 
+nav a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Roboto Mono', monospace;
+  text-transform: uppercase;
+  font-size: 40px;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+h2 {
+  font-family: 'Roboto Mono', monospace;
+  text-transform: uppercase;
+  font-size: 36px;
+  text-align: center;
+  padding: 20px 10px;
 
 }
 
-h5{
-    font-family: 'Jost', sans-serif;
-    font-weight: bold;
-    font-size: 36px ;
+h5 {
+  font-family: 'Jost', sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+h8 {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.jackets-men a {
+  text-decoration: none;
+}
+
+.jackets-women a {
+  text-decoration: none;
 }
 
 .jackets-men {
-   min-height: 70vh;
-   max-height: fit-content;
+  width: 100vw;
+  height: 25vh;
+  object-fit: cover;
+  padding-bottom: 1vh;
 }
 
-.jackets-women{
-   min-height: 70vh;
-   max-height: fit-content;
+.jackets-men-caption {
+  top: -28.5vh;
+  left: 3.2vw;
+  position: relative;
+  text-transform: none;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-family: Jost;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.jackets-women {
+  width: 100vw;
+  height: 25vh;
+  object-fit: cover;
+  padding-bottom: 1vh;
+}
+
+.jackets-women-caption {
+  top: -12vh;
+  left: 3.2vw;
+  position: relative;
+  text-transform: none;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-family: Jost;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-top: 20px;
+  margin-left: 13vw;
+  margin-right: 13vw;
+  font-family: Roboto;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.footer-box #signUp {
+  display: none;
+}
+
+.footer-box ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.footer-box li {
+  margin: 15px 0;
+}
+
+.some-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.some-footer>* {
+  padding: 0px 20px;
+}
+
+.logo-footer {
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  padding: 50px;
 }
 
 /*homepage*/
+.welcome {
+  background-image: url("images/frontpage/ansgar-scheffold-IZZ78Ugqsow-mobile.jpg");
+  height: 30vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  position: relative;
+  margin-bottom: 1vh;
+}
 
-.welcome{
-    background-image: url("images/frontpage/ansgar-scheffold-IZZ78Ugqsow-unsplash.jpg");
-    height: 554px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
+p.welcome-text {
+  font-family: 'Roboto Mono', monospace;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  font-size: 3.5vh;
+  position: relative;
+  margin-left: 12%;
+  margin-right: 12%;
+  top: 1.4vh;
 }
 
 /*men*/
 
-.men{
-    background-image: url("images/low-angle-man-exploring-nature2.jpg");
-    height: 554px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
+.men {
+  background-image: url("images/low-angle-man-exploring-nature2.jpg");
+  height: 554px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
 }
 
-.men h1{
-    font-family: 'Jost', sans-serif;
-    font-size: 70px;
-    text-align: left;
-    color: #000
+.men h1 {
+  font-family: 'Jost', sans-serif;
+  font-size: 70px;
+  text-align: left;
+  color: #000
 }
 
-.product-list{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 4px;
-    
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4px;
+
 }
 
-.product img{
-    width: 100%;
-  }
-
-.product{
-    background-color: #F5F5F5;
-    max-width: 1000px;
-    margin: auto;
+.product img {
+  width: 100%;
 }
 
-.product a{
-    text-decoration: none;
-    color: #000;
-}
-.product p{
-    font-family:'Jost', sans-serif;
-    margin: 0px;
-    font-size: 26px;
-    text-align: center;
+.product {
+  background-color: #F5F5F5;
+  max-width: 1000px;
+  margin: 25px;
 }
 
+.product a {
+  text-decoration: none;
+  color: #000;
+}
+
+.product p {
+  font-family: 'Jost', sans-serif;
+  margin: 0px;
+  font-size: 26px;
+  text-align: center;
+}
 
 /*women*/
 
-.women{
-    background-image: url("images/karsten-winegeart-D4G1VIrg-Fc-unsplash2.jpg");
-    height: 554px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
+.women {
+  background-image: url("images/karsten-winegeart-D4G1VIrg-Fc-unsplash2.jpg");
+  height: 554px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
 }
 
-.women h1{
-    font-family: 'Jost', sans-serif;
-    font-size: 70px;
-    text-align: left;
-    color: #fff
+.women.h1 {
+  font-family: 'Jost', sans-serif;
+  font-size: 70px;
+  text-align: left;
+  color: #fff
 }
-
 
 /*about*/
-
-.us{
-    font-family: 'Jost', sans-serif;
-    font-size: 23px;
-    text-align: left;
-    margin-top: 0px;
-    padding-top: 0px;
-    color: #000;
-    float: left;
-    margin-left: 2vw;
-}
-.us p{
-    margin-top: 0px;
+.us {
+  font-family: 'Jost', sans-serif;
+  font-size: 23px;
+  text-align: left;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #000;
+  float: left;
+  margin-left: 2vw;
 }
 
-.about-us{
-    margin: 50px auto;
-    max-width: 1000px;
-    
-
+.us p {
+  margin-top: 0px;
 }
 
-
+.about-us {
+  margin: 50px auto;
+  max-width: 1000px;
+  height: 600px;
+}
 
 .about-us-images {
-    width: 100%;
-}
-
-.product{
-    margin: 25px;
+  width: 100%;
 }
 
 /*contact*/
 
-.form__input{
-    display: block;
-    border: 2px solid #7D949D;
-    margin: 10px 10px 10px 0px;
-    padding: 10px;
-    width: 100%;
-    font-family: 'Roboto Mono', monospace;
-    box-sizing: border-box;
+.form__input {
+  display: block;
+  border: 2px solid #7D949D;
+  margin: 10px 10px 10px 0px;
+  padding: 10px;
+  width: 100%;
+  font-family: 'Roboto Mono', monospace;
+  box-sizing: border-box;
 }
 
 textarea {
-    resize: none;
-    height: 120px;
+  resize: none;
+  height: 120px;
 }
 
-input[type=submit]{
-   cursor: pointer;
-   float: right;
+input[type=submit] {
+  cursor: pointer;
+  float: right;
 }
 
-.contact p{
-    font-family: 'Jost', sans-serif;
-    font-size: 23px;
-    color: #0A3641;
-    font-weight: bold;
+.contact {
+  margin: 40px 40px 80px 40px;
+}
+.contact p {
+  font-family: 'Jost', sans-serif;
+  font-size: 23px;
+  color: #0A3641;
+  font-weight: bold;
 }
 
-form{
-    color: #868585;
-    font-family: 'Roboto Mono', monospace;
-} 
-
-
-
-/*products*/
-
-
-
-.product-specific{
-    display: flex;
-    align-items: center;
-    max-width: 1000px;
-    margin: auto;
+form {
+  color: #868585;
+  font-family: 'Roboto Mono', monospace;
 }
 
-.product-specific > *{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+/*checkout*/
+.check-out {
+  background: #F5F5F5;
+}
+
+.product-specific--check-out {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+
+.check-out-sucess {
+  color: #0A3641;
+  text-align: center;
+  margin: auto;
+  width: 60vw;
+  padding-bottom: 30px;
+}
+
+.check-out-sucess p {
+  font-family: 'Jost', sans-serif;
+  font-size: 20px;
+  padding: 0px 0px 20px 0px;
+}
+
+.cta {
+  background-color: #F4C14F;
+  color: black;
+  font-size: 1em;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bolder;
+  border-radius: 6px;
+  padding: 1% 6%;
+  text-decoration: none;
+  border: 3px solid black
+}
+
+/*footer*/
+
+footer {
+  background-color: #E4F5FB;
+  color: #0A3641;
+}
+
+@media (min-width: 600px) {
+  .header-top {
+    margin-top: 5vh;
+    height: 96.2px;
   }
 
-.product-image{
+  #logo-top {
+    width: 227.8px;
+    margin-left: 8vw;
+  }
+
+  #logo-bottom {
+    display: none;
+  }
+
+  .topnav-search {
+    display: block;
+  }
+
+  .topnav-icons {
+    margin-top: 3.3rem;
+    margin-right: 8vw;
+  }
+
+  #menuToggle {
+    display: none;
+  }
+
+  #menuToggle a {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .jackets {
+    margin-left: 8vw;
+    margin-right: 8vw;
+    height: 50vh;
+  }
+
+  .jackets-men {
+    width: 40vw;
+    height: 45vh;
+    object-fit: cover;
+    padding-bottom: 4vh;
+    float: left;
+    filter: drop-shadow(0px 3px 2px #888);
+  }
+
+  .jackets-men-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     width: 100%;
+    color: #000;
+    font-family: Jost;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 
+  .jackets-women {
+    float: right;
+    display: flex;
+    width: 40vw;
+    height: 45vh;
+    object-fit: cover;
+    padding-bottom: 4vh;
+    filter: drop-shadow(0px 3px 2px #888);
+  }
+
+  .jackets-women-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: #FFF;
+    font-family: Jost;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  /*men*/
+
+  .product-list {
+    flex-direction: row;
+  }
+
+  /*about*/
+  .about-us {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about-us>* {
+    flex: 1;
+  }
+
+  /*check-out*/
+  .product-specific--check-out {
+    display: flex;
+    align-items: center;
+  }
+
+  /*contact*/
+
+  .contact {
+    max-width: 40%;
+    margin: 50px auto;
+  }
+
+  .footer-box {
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+
+  .footer-box #signUp {
+    display: block;
+  }
+
+  .welcome {
+    background-image: url("images/frontpage/ansgar-scheffold-IZZ78Ugqsow-mobile.jpg");
+    margin-bottom: 2rem;
+  }
+
+  .welcome {
+    height: 44vh;
+    background-image: url("images/frontpage/ansgar-scheffold-IZZ78Ugqsow-unsplash.jpg");
+  }
+
+  p.welcome-text {
+    margin-right: 50vw;
+    font-size: 4vh;
+    padding-top: 20px;
+  }
 }
-
-
-
-
-
-
-
-
-/*check out*/
-
-.check-out {
-    background: #F5F5F5;
-}
-
-.product-specific--check-out{
-    max-width: 1000px;
-    margin: auto;
-}
-
-
-
-.check-out-sucess{
-    color:#0A3641;
-    text-align: center;
-    margin: auto;
-    width: 30%;
-    
-}
-
-.check-out-sucess p{
-    font-family: 'Jost', sans-serif;
-    font-size: 20px;
-    padding: 0px 0px 20px 0px;
-}
-
-footer{
-    background-color: #E4F5FB;
-    color: #0A3641;
-}
-
-@media only screen and (min-width:600px){
-    .product-list{
-        flex-direction: row;
-    }
-
-    /*about*/
-    .about-us{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .about-us > *{
-        flex: 1;
-    }
-
-    /*check-out*/
-    .product-specific--check-out{
-        display: flex;
-        align-items: center;
-    }
-
-    /*contact*/
-
-    .contact{
-            max-width: 40%;
-            margin: 50px auto;
-          }
-
-
-        }
-
-
-
-
