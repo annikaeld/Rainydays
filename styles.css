@@ -584,6 +584,7 @@ input[type=submit] {
 .contact {
   margin: 40px 40px 80px 40px;
 }
+
 .contact p {
   font-family: 'Jost', sans-serif;
   font-size: 23px;
@@ -591,37 +592,97 @@ input[type=submit] {
   font-weight: bold;
 }
 
+
+
 form {
   color: #868585;
   font-family: 'Roboto Mono', monospace;
 }
 
 /*checkout*/
-.check-out {
-  background: #F5F5F5;
+.product-specific--check-out,
+.check-out--info{
+  background-color: #F5F5F5;
+  box-sizing: border-box;
+  width: 467px;
+  height: 237px;
 }
 
-.product-specific--check-out {
+.check-out{
+  display:flex;
+  flex-direction: row;
   max-width: 1000px;
-  margin: auto;
+  margin: 50px auto;
 }
 
+.product-specific--check-out{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.check-out--info{
+  margin-left: 10px;
+}
+
+.product-image-check-out{
+  flex:2;
+  width: 152px;
+  height: 152px;
+}
+
+.product-text{
+  flex:3;
+  font-family: 'Roboto Mono', monospace;;
+}
+
+.product-specific--check-out i{
+  flex:1;
+} 
+
+.check-out--info{
+  display:flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.form__input{
+  flex:1;
+}
+
+.last-digits{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.check-out--info cta{
+  flex: 1;
+}
+
+.buy-success{
+  max-width: 350px;
+  max-height: 200px;
+}
 
 
 .check-out-sucess {
   color: #0A3641;
   text-align: center;
   margin: auto;
-  width: 25vw;
   min-width: 215px;
   padding-bottom: 70px;
-  display:block;
 }
 
 .check-out-sucess p {
   font-family: 'Jost', sans-serif;
   font-size: 20px;
   padding: 0px 0px 20px 0px;
+  max-width: 375px;
+  text-align: center;
+  margin: 50px auto;
 }
 
 .check-out-sucess h5 {
@@ -641,6 +702,44 @@ form {
   text-decoration: none;
   border: 3px solid black
 }
+
+
+.check-out-cta{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+
+}
+
+/*product specific*/
+
+.product-specific--jacket,
+.product-specific__details{
+  background-color: #F5F5F5;
+  box-sizing: border-box;
+  width: 478px;
+  height: 478px;
+  
+}
+
+
+.product-image{
+  width: 478px;
+  height: 478px;
+}
+
+.product-specific{
+  display:flex;
+  flex-direction: row;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.product-specific__details{
+  
+}
+
+
 
 
 
@@ -782,10 +881,9 @@ footer {
   }
 
   /*check-out*/
-  .product-specific--check-out {
-    display: flex;
-    align-items: center;
-  }
+  
+
+ 
 
   /*contact*/
 
