@@ -1,0 +1,160 @@
+@media (min-width: 600px) {
+    .header-top {
+        margin-top: 5vh;
+        height: 96.2px;
+    }
+
+    #logo-top {
+        width: 227.8px;
+        margin-left: 8vw;
+    }
+
+    #logo-bottom {
+        display: none;
+    }
+
+    .topnav-search {
+        display: block;
+        width: 50%;
+    }
+
+    .topnav-icons {
+        margin-top: 3.3rem;
+        margin-right: 8vw;
+    }
+
+    #menuToggle {
+        display: none;
+    }
+
+    #menuToggle a {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .jackets {
+        margin-left: 8vw;
+        margin-right: 8vw;
+        height: 50vh;
+    }
+
+    .jackets-men {
+        width: 40vw;
+        height: 45vh;
+        object-fit: cover;
+        padding-bottom: 4vh;
+        float: left;
+        filter: drop-shadow(0px 3px 2px #888);
+    }
+
+    .jackets-men-caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-transform: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        color: #000;
+        font-family: Jost;
+        font-size: 54px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .jackets-women {
+        float: right;
+        display: flex;
+        width: 40vw;
+        height: 45vh;
+        object-fit: cover;
+        padding-bottom: 4vh;
+        filter: drop-shadow(0px 3px 2px #888);
+    }
+
+    .jackets-women-caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-transform: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        color: #FFF;
+        font-family: Jost;
+        font-size: 54px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    /*men*/
+
+    .men {
+        height: 554px;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /*women*/
+
+    .women {
+        height: 554px;
+    }
+
+    /*about*/
+    .about-us {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .about-us>* {
+        flex: 1;
+    }
+
+    /*check-out*/
+    .product-specific--check-out {
+        display: flex;
+        align-items: center;
+    }
+
+    /*contact*/
+
+    .contact {
+        max-width: 40%;
+        margin: 50px auto;
+    }
+
+    .footer-box {
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    .footer-box #signUp {
+        display: block;
+    }
+
+    .welcome {
+        background-image: url("../images/frontpage/ansgar-scheffold-IZZ78Ugqsow-mobile.jpg");
+        margin-bottom: 2rem;
+        height: 44vh;
+    }
+
+    p.welcome-text {
+        margin-right: 50vw;
+        font-size: 4vh;
+        padding-top: 20px;
+    }
+
+}

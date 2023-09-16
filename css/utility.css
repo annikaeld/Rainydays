@@ -1,0 +1,147 @@
+/*
+ * Pure CSS Hamburger fold-out menu
+ * Based on https://codepen.io/erikterwan/pen/EVzeRP
+ * MIT License 
+ */
+
+#menuToggle {
+    display: block;
+    position: relative;
+    margin-top: 4px;
+    z-index: 1;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: #000;
+}
+
+#menuToggle input {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    cursor: pointer;
+
+    /* hide this */
+    opacity: 0;
+    /* and place it over the hamburger */
+    z-index: 2;
+}
+
+#menuToggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin-bottom: 4.5px;
+    position: relative;
+    background: #000;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(1px, 1px);
+    background: #232323;
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(1px, 0px);
+}
+
+#menu {
+    position: absolute;
+    width: 70vw;
+    right: -64px;
+    margin: 0px 0 0 0px;
+    top: 49px;
+    padding: 10px;
+
+    background: #f5f5f5;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: scale(0, 0);
+    z-index: 8;
+}
+
+#menu li {
+    color: #0A3641;
+    font-family: Jost;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 20px 50px 20px;
+}
+
+#menu #closemenu {
+    background-image: url("images/icons/close-icon.svg");
+    background-position-x: right;
+    background-repeat: no-repeat;
+}
+
+#menuToggle input:checked~ul {
+    transform: none;
+}
+
+/* 
+ * HTML Expand Collapse Text without JavaScript
+ * Based on https://codeconvey.com/html-expand-collapse-text-without-javascript/
+ */
+.accordion>input[name="collapse"] {
+    display: none;
+}
+
+.accordion .content {
+    overflow: hidden;
+    transition: 0.3s;
+    height: 0;
+    margin-left: 40px;
+}
+
+.accordion label {
+    cursor: pointer;
+}
+
+.accordion .handle label:after {
+    font-family: FontAwesome;
+    content: "\f107";
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1em;
+    line-height: 1.556em;
+    vertical-align: middle;
+    transition: 0.4s;
+}
+
+.accordion>input[name="collapse"]:checked~.handle label:before {
+    transform: rotate(180deg);
+    transform-origin: center;
+    transition: 0.4s;
+}
+
+.accordion>input[name="collapse"]:checked~.content {
+    height: 120px;
+    transition: height 0.3;
+}
