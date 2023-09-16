@@ -10,6 +10,10 @@
     overflow-x: hidden;
   }
 
+  main {
+    margin-bottom: 50px;
+  }
+
   /*show all elements with red border*/
   /* * {border:1px solid red} */
 
@@ -198,6 +202,37 @@
     text-decoration: none;
   }
 
+  /* breadcrumb */
+  .breadcrumb {
+    padding: 1.5rem 0.5rem 0 0.5rem;
+    margin-left: 20px;
+    background-color: #FFF;
+    color: #0A3641;
+    text-align: center;
+    font-family: Roboto Mono;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;  }
+
+  .breadcrumb ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .breadcrumb a {
+    color: #0A3641;
+  }
+
+  .breadcrumb li:not(:last-child)::after {
+    display: inline-block;
+    margin: 0 .25rem;
+    content: ">";
+  }
+
   h1 {
     font-family: 'Roboto Mono', monospace;
     text-transform: uppercase;
@@ -215,6 +250,13 @@
 
   }
 
+  h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight:normal;
+    font-size: 30px;
+  
+  }
+  
   h5 {
     font-family: 'Jost', sans-serif;
     font-weight: bold;
@@ -291,12 +333,12 @@
     font-style: normal;
     font-weight: 700;
   }
-  
-  .footer-box a{
+
+  .footer-box a {
     text-decoration: none;
-    color:#0A3641
+    color: #0A3641
   }
-  
+
   .footer-box #signUp {
     display: none;
   }
@@ -354,12 +396,7 @@
   /*men*/
 
   .men {
-    background-image: url("../images/low-angle-man-exploring-nature2.jpg");
-    height: 280px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: left;
-    background-position-y: top;
+    display: none;
   }
 
   .men h1 {
@@ -371,12 +408,10 @@
 
   .product-list {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 4px;
     max-width: 1000px;
-    margin: auto;
-
-
+    margin: 0 10px 50px 10px;
   }
 
   .product img {
@@ -390,7 +425,8 @@
   .product {
     background-color: #F5F5F5;
     max-width: 1000px;
-    margin: 25px;
+    margin: 8px;
+    padding: 8px;
   }
 
   .product a {
@@ -401,19 +437,14 @@
   .product p {
     font-family: 'Jost', sans-serif;
     margin: 0px;
-    font-size: 26px;
+    font-size: 17px;
     text-align: center;
   }
 
   /*women*/
 
   .women {
-    background-image: url("../images/karsten-winegeart-D4G1VIrg-Fc-unsplash2.jpg");
-    height: 280px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: left;
-    background-position-y: top;
+    display: none;
   }
 
   .women h1 {
@@ -454,8 +485,8 @@
   .form__input {
     display: block;
     border: 2px solid #7D949D;
-    margin: 0px 10px 12px 0px;
-    padding: 2px 5px;
+    margin: 0px 10px 16px 0px;
+    padding: 4px 5px;
     width: 100%;
     font-family: 'Roboto Mono', monospace;
     box-sizing: border-box;
@@ -492,14 +523,14 @@
   .check-out--info {
     background-color: #F5F5F5;
     box-sizing: border-box;
-    width: 467px;
+    width: 100%;
   }
 
   .check-out {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     max-width: 1000px;
-    margin: 50px auto;
+    margin: 0px auto;
   }
 
   .product-specific--check-out {
@@ -514,7 +545,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 28px 0;
+    padding: 50px;
+    background-color: #FFF
   }
 
   .product-image {
@@ -543,6 +575,7 @@
   #cvc {
     margin-right: 0;
   }
+
   .check-out--info cta {
     flex: 1;
   }
@@ -550,7 +583,8 @@
   .buy-success {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    max-width: 350px;
+    max-height: 200px;
   }
 
   .no-label {
@@ -561,17 +595,17 @@
     color: #0A3641;
     text-align: center;
     margin: auto;
-    width: 25vw;
     min-width: 215px;
     padding-bottom: 70px;
-    display: flex;
-    flex-direction: column;
   }
 
   .check-out-sucess p {
     font-family: 'Jost', sans-serif;
     font-size: 20px;
-    padding: 0px 0px 20px 0px;
+    padding: 0px 0px 30px 0px;
+    max-width: 375px;
+    text-align: center;
+    margin: 50px auto;
   }
 
   .check-out-sucess h5 {
@@ -589,47 +623,65 @@
     border-radius: 6px;
     padding: 0.2em 0.5em;
     text-decoration: none;
-    text-align: center;
     border: 3px solid black;
+    text-align: center;
+  }
+
+  .check-out-cta-success {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+
+  }
+
+  .check-out-button {
     width: 40%;
   }
-  
-.check-out-cta{
-  display: flex;
-  justify-content: center;
-  padding-bottom: 50px;
 
-}
+  /*jacket specific*/
 
+  .product-specific--jacket,
+  .product-specific__details {
+    background-color: #F5F5F5;
+    box-sizing: border-box;
+    width: 478px;
+    height: 478px;
+  }
 
-/*jacket specific*/
+  .product-specific__details {
+    padding: 66px;
+    margin-left: 15px;
+  }
 
-.product-specific--jacket,
-.product-specific__details{
-  background-color: #F5F5F5;
-  box-sizing: border-box;
-  width: 478px;
-  height: 478px;
-  
-}
+  .product-image {
+    width: 478px;
+    height: 478px;
+  }
 
+  #check-out-product-image {
+    max-height: 110px;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
 
-.product-image{
-  width: 478px;
-  height: 478px;
-}
+  .product-specific {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    margin: 50px auto;
+  }
+  .description-header {
+    font-weight: 800;
+    margin-bottom: 0px;
+  }
+  .description-paragraph {
+    margin-top: 5px;
+    padding-bottom: 10px;
+  }
+  .product-specific__details {
+    font-family: 'Roboto Mono', monospace;
 
-.product-specific{
-  display:flex;
-  flex-direction: row;
-  max-width: 1000px;
-  margin: 50px auto;
-}
-
-.product-specific__details{
-  font-family: 'Roboto Mono', monospace;
-
-}
+  }
 
   /*footer*/
 

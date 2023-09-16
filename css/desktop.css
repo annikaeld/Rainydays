@@ -36,10 +36,19 @@
         justify-content: space-around;
     }
 
+    .breadcrumb {
+        display: none;
+    }
+
     .jackets {
         margin-left: 8vw;
         margin-right: 8vw;
         height: 50vh;
+    }
+
+    /* men */
+    .men {
+        display: block;
     }
 
     .jackets-men {
@@ -101,15 +110,35 @@
 
     .men {
         height: 554px;
+        background-image: url("../images/low-angle-man-exploring-nature2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: left;
+        background-position-y: top;
     }
 
     .product-list {
         grid-template-columns: repeat(3, 1fr);
+        margin: auto;
+    }
+
+    .product {
+        margin: 25px;
+    }
+
+    .product p {
+        font-size: 26px;
     }
 
     /*women*/
 
     .women {
+        display: block;
+        background-image: url("../images/karsten-winegeart-D4G1VIrg-Fc-unsplash2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: left;
+        background-position-y: top;
         height: 554px;
     }
 
@@ -124,12 +153,31 @@
     }
 
     /*check-out*/
+    .product-specific--check-out,
+    .check-out--info {
+        width: 467px;
+    }
+
+    .check-out {
+        flex-direction: row;
+    }
+
     .product-specific--check-out {
         display: flex;
         align-items: center;
     }
 
+    .check-out--info {
+        background-color: #F5F5F5;
+        padding: 28px 0;
+    }
+
     /*contact*/
+
+    .form__input {
+        margin: 0px 10px 12px 0px;
+        padding: 2px 5px;
+    }
 
     .contact {
         max-width: 40%;
@@ -155,6 +203,22 @@
         margin-right: 50vw;
         font-size: 4vh;
         padding-top: 20px;
+    }
+
+}
+
+@media (min-width: 860px) {
+    .topnav-icons {
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .topnav-icons>* {
+        padding: 0px 22px 5px 22px;
+    }
+
+    #searchform {
+        width: 220px;
     }
 
 }
