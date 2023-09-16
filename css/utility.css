@@ -135,7 +135,7 @@
     transition: 0.4s;
 }
 
-.accordion>input[name="collapse"]:checked~.handle label:before {
+.accordion>input[name="collapse"]:checked~.handle label:after {
     transform: rotate(180deg);
     transform-origin: center;
     transition: 0.4s;

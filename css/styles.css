@@ -418,10 +418,6 @@
     width: 100%;
   }
 
-  .product-image {
-    width: 100%;
-  }
-
   .product {
     background-color: #F5F5F5;
     max-width: 1000px;
@@ -550,9 +546,7 @@
   }
 
   .product-image {
-    flex: 2;
-    width: 152px;
-    height: 152px;
+    padding: 0px 20px;
   }
 
   .product-text {
@@ -653,11 +647,6 @@
     margin-left: 15px;
   }
 
-  .product-image {
-    width: 478px;
-    height: 478px;
-  }
-
   #check-out-product-image {
     max-height: 110px;
     margin-left: 20px;
@@ -681,6 +670,10 @@
   .product-specific__details {
     font-family: 'Roboto Mono', monospace;
 
+  }
+
+  .more-details {
+    padding-bottom: 50px;
   }
 
   /*footer*/
