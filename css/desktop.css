@@ -182,8 +182,9 @@
         height: 44vh;
     }
 
+
     h1.welcome-text {
-        margin-right: 53vw;
+        margin-right: 60vw;
         font-size: 4vh;
         padding-top: 20px;
     }
@@ -246,5 +247,11 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+    }
+
+    h1.welcome-text {
+        margin-right: 53vw;
+        font-size: 4vh;
+        padding-top: 20px;
     }
 }
