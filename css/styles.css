@@ -405,7 +405,8 @@
     font-family: 'Jost', sans-serif;
     font-size: 70px;
     text-align: left;
-    color: #000
+    color: #000;
+    margin-top: 0px;
   }
 
   .product-list {
@@ -449,7 +450,8 @@
     font-family: 'Jost', sans-serif;
     font-size: 70px;
     text-align: left;
-    color: #fff
+    color: #fff;
+    margin-top: 0px;
   }
 
   /*about*/
