@@ -100,6 +100,10 @@
     background-size: 1.4rem;
   }
 
+  /* 
+   * Responsive Navbar with Dropdown, based on
+   * https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp 
+   */
   .navbar {
     font-family: 'jost', sans-serif;
     font-size: 18px;
@@ -213,7 +217,8 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;  }
+    line-height: normal;
+  }
 
   .breadcrumb ul {
     display: flex;
@@ -252,11 +257,11 @@
 
   h3 {
     font-family: 'Jost', sans-serif;
-    font-weight:normal;
+    font-weight: normal;
     font-size: 30px;
-  
+
   }
-  
+
   h5 {
     font-family: 'Jost', sans-serif;
     font-weight: bold;
@@ -634,17 +639,17 @@
 
   /*jacket specific*/
 
-  .product-specific--jacket,
-  .product-specific__details {
+  .product-specific--jacket {
     background-color: #F5F5F5;
     box-sizing: border-box;
-    width: 478px;
-    height: 478px;
   }
 
   .product-specific__details {
+    background-color: #F5F5F5;
+    box-sizing: border-box;
     padding: 66px;
     margin-left: 15px;
+    font-family: 'Roboto Mono', monospace;
   }
 
   #check-out-product-image {
@@ -655,21 +660,23 @@
 
   .product-specific {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     max-width: 1000px;
     margin: 50px auto;
   }
+
   .description-header {
     font-weight: 800;
     margin-bottom: 0px;
   }
+
   .description-paragraph {
     margin-top: 5px;
     padding-bottom: 10px;
   }
-  .product-specific__details {
-    font-family: 'Roboto Mono', monospace;
 
+  .handle label {
+    font-size: 20px;
   }
 
   .more-details {

@@ -194,7 +194,7 @@
     }
 
     .welcome {
-        background-image: url("../images/frontpage/ansgar-scheffold-IZZ78Ugqsow-mobile.jpg");
+        background-image: url("../images/frontpage/ansgar-scheffold-IZZ78Ugqsow-unsplash.jpg");
         margin-bottom: 2rem;
         height: 44vh;
     }
@@ -205,6 +205,11 @@
         padding-top: 20px;
     }
 
+    /* jacket-specific */
+    .product-specific {
+        flex-direction: row;
+      }
+    
 }
 
 @media (min-width: 860px) {
