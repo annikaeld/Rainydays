@@ -469,9 +469,8 @@
   }
 
   .about-us {
-    margin: 50px auto;
+    margin: 50px auto 400px;
     max-width: 1000px;
-    height: 600px;
   }
 
   .about-us-images {
