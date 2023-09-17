@@ -660,9 +660,17 @@
 
   .product-specific {
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     max-width: 1000px;
     margin: 50px auto;
+  }
+
+  .product-specific--jacket{
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
   }
 
   .description-header {
