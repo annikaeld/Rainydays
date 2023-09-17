@@ -310,8 +310,8 @@
   }
 
   .jackets-women-caption {
-    top: -12vh;
-    left: 3.2vw;
+    top: -28vh;
+    left: 2vw;
     position: relative;
     width: 60%;
     text-transform: none;
@@ -393,6 +393,7 @@
     margin-left: 12%;
     margin-right: 12%;
     top: 1.4vh;
+    padding: 0px;
   }
 
   /*men*/
