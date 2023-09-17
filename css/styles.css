@@ -382,7 +382,7 @@
     margin-bottom: 1vh;
   }
 
-  p.welcome-text {
+  h1.welcome-text {
     font-family: 'Roboto Mono', monospace;
     text-transform: uppercase;
     text-align: center;
