@@ -182,7 +182,7 @@
         height: 44vh;
     }
 
-    p.welcome-text {
+    h1.welcome-text {
         margin-right: 50vw;
         font-size: 4vh;
         padding-top: 20px;
