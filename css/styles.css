@@ -652,6 +652,7 @@
     max-height: 110px;
     margin-left: 20px;
     margin-right: 10px;
+    width: auto;
   }
 
   .product-specific {
