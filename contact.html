@@ -1,167 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Rainydays | Contact</title>
-    <meta
-      name="description"
-      content="The official home page of Rainydays - we offer jackets for your next adventure."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Roboto+Mono&family=Roboto:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link href="css/styles.css" rel="stylesheet" />
-    <script
-      src="https://kit.fontawesome.com/9283a1213e.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body>
-    <header>
-      <div class="header-top">
-        <a href="index.html"
-          ><img
-            id="logo-top"
-            src="images/logo/RainyDays_Logo.png"
-            alt="RainyDays-Logo"
-        /></a>
-        <div class="topnav-search">
-          <input type="text" placeholder="SEARCH" id="searchform" />
-        </div>
-        <div class="topnav-icons">
-          <a href="#"
-            ><img src="images/icons/heart-icon.svg" alt="heart-icon"
-          /></a>
-          <a href="#"
-            ><img src="images/icons/user-icon.svg" alt="user-icon"
-          /></a>
-          <a href="check-out.html"
-            ><img src="images/icons/cart-icon.svg" alt="cart-icon"
-          /></a>
-          <div id="menuToggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-            <ul id="menu">
-              <div class="accordion">
-                <input
-                  type="checkbox"
-                  name="collapse"
-                  id="handle4"
-                  checked="checked"
-                />
-                <li class="handle">
-                  <label for="handle4">Jackets</label>
-                </li>
-                <div class="content">
-                  <a href="men.html">
-                    <li>Men</li>
-                  </a>
-                  <a href="women.html">
-                    <li>Women</li>
-                  </a>
-                </div>
+<head>
+  <meta charset="UTF-8">
+  <title>Rainydays | Contact</title>
+  <meta name="description" content="The official home page of Rainydays - we offer jackets for your next adventure.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Roboto+Mono&family=Roboto:wght@700&display=swap"
+    rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9283a1213e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-top">
+      <a href="index.html"><img id="logo-top" src="images/logo/RainyDays_Logo.png" alt="RainyDays-Logo"></a>
+      <div class="topnav-search">
+        <input type="text" placeholder="SEARCH" id="searchform">
+      </div>
+      <div class="topnav-icons">
+        <a href="#"><img src="images/icons/heart-icon.svg" alt="heart-icon"></a>
+        <a href="#"><img src="images/icons/user-icon.svg" alt="user-icon"></a>
+        <a href="check-out.html"><img src="images/icons/cart-icon.svg" alt="cart-icon"></a>
+        <div id="menuToggle">
+          <input type="checkbox">
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <div class="accordion">
+              <input type="checkbox" name="collapse" id="handle4" checked="checked">
+              <li class="handle">
+                <label for="handle4">Jackets</label>
+              </li>
+              <div class="content">
+                <a href="men.html">
+                  <li>Men</li>
+                </a>
+                <a href="women.html">
+                  <li>Women</li>
+                </a>
               </div>
-              <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="about.html">About Us</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="header-bottom">
-        <img
-          id="logo-bottom"
-          src="images/logo/RainyDays_Logo-bottom.png"
-          alt="Rainydays slogan"
-        />
-        <div class="navbar">
-          <div class="dropdown">
-            <button class="dropbtn">
-              Our Jackets
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <a href="men.html">Men</a>
-              <a href="women.html">Women</a>
             </div>
-          </div>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact us</a>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
         </div>
       </div>
-    </header>
-    <h1>Welcome to customer service</h1>
-    <div class="contact">
-      <section>
-        <form action="message-sent.php" method="POST">
-          <p>Contact us:</p>
-          <label for="email"></label>
-          <input
-            id="email"
-            type="email"
-            placeholder="Your email address"
-            name="email"
-            class="form__input"
-            required
-          />
-          <label for="message"></label>
-          <textarea
-            id="message"
-            placeholder="Your message"
-            name="message"
-            class="form__input"
-          ></textarea>
-          <a href="contact-sucess.html" class="cta">Send</a>
-        </form>
-      </section>
     </div>
-    <footer>
-      <div class="footer-box">
-        <div>
-          <ul>
-            <li>SHOP</li>
-            <li><a href="women.html">Jackets Women</a></li>
-            <li><a href="men.html">Jackets Men</a></li>
-          </ul>
+    <div class="header-bottom">
+      <img id="logo-bottom" src="images/logo/RainyDays_Logo-bottom.png" alt="Rainydays slogan">
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            Our Jackets
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="men.html">Men</a>
+            <a href="women.html">Women</a>
+          </div>
         </div>
-        <div>
-          <ul>
-            <li>ABOUT US</li>
-            <li><a href="about.html">Who we are</a></li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li>HELP</li>
-            <li><a href="contact.html">Contact us</a></li>
-          </ul>
-        </div>
-        <div id="signUp">
-          <ul>
-            <li>SIGN UP and get 10 % off your first purchase</li>
-          </ul>
-        </div>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact us</a>
       </div>
-      <div class="some-footer">
-        <div>
-          <img src="images/icons/facebook-icon.svg" alt="facebook-icon" />
-        </div>
-        <div>
-          <img src="images/icons/instagram-icon.svg" alt="instagram-icon" />
-        </div>
-        <div>
-          <img src="images/icons/linkedin-icon.svg" alt="linkedin-icon" />
-        </div>
+    </div>
+  </header>
+  <h1>Welcome to customer service</h1>
+  <div class="contact">
+    <section>
+      <form action="message-sent.php" method="POST">
+        <p>Contact us:</p>
+        <label for="email"></label>
+        <input id="email" type="email" placeholder="Your email address" name="email" class="form__input" required />
+        <label for="message"></label>
+        <textarea id="message" placeholder="Your message" name="message" class="form__input"></textarea>
+        <a href="contact-sucess.html" class="cta">Send</a>
+      </form>
+    </section>
+  </div>
+  <footer>
+    <div class="footer-box">
+      <div>
+        <ul>
+          <li>SHOP</li>
+          <li><a href="women.html">Jackets Women</a></li>
+          <li><a href="men.html">Jackets Men</a></li>
+        </ul>
       </div>
-      <div class="logo-footer">
-        <img src="images/logo/RainyDays_Logo.png" alt="RainyDays-Logo" />
+      <div>
+        <ul>
+          <li>ABOUT US</li>
+          <li><a href="about.html">Who we are</a></li>
+        </ul>
       </div>
-    </footer>
-  </body>
+      <div>
+        <ul>
+          <li>HELP</li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+      <div id="signUp">
+        <ul>
+          <li>SIGN UP and get 10 % off your first purchase</li>
+        </ul>
+      </div>
+    </div>
+    <div class="some-footer">
+      <div>
+        <img src="images/icons/facebook-icon.svg" alt="facebook-icon">
+      </div>
+      <div>
+        <img src="images/icons/instagram-icon.svg" alt="instagram-icon">
+      </div>
+      <div>
+        <img src="images/icons/linkedin-icon.svg" alt="linkedin-icon">
+      </div>
+    </div>
+    <div class="logo-footer">
+      <img src="images/logo/RainyDays_Logo.png" alt="RainyDays-Logo">
+    </div>
+  </footer>
+</body>
+
 </html>
