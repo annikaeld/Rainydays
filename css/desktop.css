@@ -60,23 +60,7 @@
         filter: drop-shadow(0px 3px 2px #888);
     }
 
-    .jackets-men-caption {
-        position: absolute;
-        top: 0;
-        left: 0;
-        text-transform: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        color: #000;
-        font-family: Jost;
-        font-size: 54px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
+    
 
     .jackets-women {
         float: right;
@@ -88,23 +72,7 @@
         filter: drop-shadow(0px 3px 2px #888);
     }
 
-    .jackets-women-caption {
-        position: absolute;
-        top: 0;
-        left: 0;
-        text-transform: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        color: #FFF;
-        font-family: Jost;
-        font-size: 54px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
+ 
 
     /*men*/
 
@@ -241,4 +209,42 @@
         width: 220px;
     }
 
+}
+
+@media (min-width: 1000px){
+    .jackets-men-caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-transform: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        color: #000;
+        font-family: Jost;
+        font-size: 54px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .jackets-women-caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-transform: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        color: #FFF;
+        font-family: Jost;
+        font-size: 54px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 }
