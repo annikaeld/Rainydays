@@ -167,9 +167,18 @@
         align-items: center;
     }
 
+    .product-specific__details {
+        margin-left: 15px;
+        background-color: #F5F5F5;
+    }
+
     .check-out--info {
         background-color: #F5F5F5;
         padding: 28px 0;
+    }
+
+    .product-image {
+        padding: 0px 20px;
     }
 
     /*contact*/
@@ -208,8 +217,8 @@
     /* jacket-specific */
     .product-specific {
         flex-direction: row;
-      }
-    
+    }
+
 }
 
 @media (min-width: 860px) {
