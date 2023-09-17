@@ -160,6 +160,7 @@
 
     .check-out {
         flex-direction: row;
+        margin: 0px auto 200px;
     }
 
     .product-specific--check-out {
