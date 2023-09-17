@@ -269,10 +269,6 @@
     font-size: 36px;
   }
 
-  h8 {
-    font-family: 'Roboto Mono', monospace;
-  }
-
   .jackets-men a {
     text-decoration: none;
   }
@@ -667,11 +663,10 @@
   }
 
   .product-specific--jacket{
-  display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-right: 10px;
   }
 
   .description-header {
@@ -686,6 +681,7 @@
 
   .handle label {
     font-size: 20px;
+    padding: 0px;
   }
 
   .more-details {
