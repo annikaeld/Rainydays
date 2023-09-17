@@ -93,6 +93,7 @@
     font-weight: 600;
     line-height: normal;
     padding: 20px 50px 20px;
+    list-style-type: none;
 }
 
 #menu #closemenu {
@@ -144,4 +145,12 @@
 .accordion>input[name="collapse"]:checked~.content {
     height: auto;
     transition: height 0.3;
+}
+
+.accordion {
+    padding-left: 0;
+}
+
+#menulabel {
+    font-size: 16px;
 }
