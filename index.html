@@ -1,145 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rainydays | Home</title>
+    <meta name="description" content="The official home page of Rainydays" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="link"
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Roboto+Mono&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/9283a1213e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Rainydays | Home</title>
-  <meta name="description" content="The official home page of Rainydays" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="link" rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Roboto+Mono&family=Roboto:wght@700&display=swap"
-    rel="stylesheet" />
-  <link href="css/styles.css" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/9283a1213e.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  <header>
-    <div class="header-top">
-      <a href="index.html"><img id="logo-top" src="images/logo/RainyDays_Logo.png" /></a>
-      <div class="topnav-search">
-        <input type="text" placeholder="SEARCH" id="searchform" />
+  <body>
+    <header>
+      <div class="header-top">
+        <a href="index.html"
+          ><img id="logo-top" src="images/logo/RainyDays_Logo.png"
+        /></a>
+        <div class="topnav-search">
+          <input type="text" placeholder="SEARCH" id="searchform" />
+        </div>
+        <div class="topnav-icons">
+          <a href="#"
+            ><img src="images/icons/heart-icon.svg" alt="heart-icon"
+          /></a>
+          <a href="#"
+            ><img src="images/icons/user-icon.svg" alt="user-icon"
+          /></a>
+          <a href="check-out.html"
+            ><img src="images/icons/cart-icon.svg" alt="cart-icon"
+          /></a>
+          <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+              <section class="accordion">
+                <input
+                  type="checkbox"
+                  name="collapse"
+                  id="handle4"
+                  checked="checked"
+                />
+                <li class="handle">
+                  <label for="handle4">Jackets</label>
+                </li>
+                <div class="content">
+                  <a href="men.html">
+                    <li>Men</li>
+                  </a>
+                  <a href="women.html">
+                    <li>Women</li>
+                  </a>
+                </div>
+              </section>
+              <a href="contact.html">
+                <li>Contact Us</li>
+              </a>
+              <a href="about.html">
+                <li>About Us</li>
+              </a>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="topnav-icons">
-        <a href="#"><img src="images/icons/heart-icon.svg" /></a>
-        <a href="#"><img src="images/icons/user-icon.svg" /></a>
-        <a href="check-out.html"><img src="images/icons/cart-icon.svg" /></a>
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-            <section class="accordion">
-              <input type="checkbox" name="collapse" id="handle4" checked="checked" />
-              <li class="handle">
-                <label for="handle4">Jackets</label>
-              </li>
-              <div class="content">
-                <a href="men.html">
-                  <li>Men</li>
-                </a>
-                <a href="women.html">
-                  <li>Women</li>
-                </a>
-              </div>
-            </section>
-            <a href="contact.html">
-              <li>Contact Us</li>
-            </a>
-            <a href="about.html">
-              <li>About Us</li>
-            </a>
+      <div class="header-bottom">
+        <img id="logo-bottom" src="images/logo/RainyDays_Logo-bottom.png" />
+        <div class="navbar">
+          <div class="dropdown">
+            <button class="dropbtn">
+              Our Jackets
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="men.html">Men</a>
+              <a href="women.html">Women</a>
+            </div>
+          </div>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact us</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="welcome">
+      <p class="welcome-text">Jackets for your next adventure</p>
+    </section>
+
+    <main>
+      <section class="jackets">
+        <div class="jackets-men">
+          <a href="men.html">
+            <img
+              src="images/frontpage/low-angle-shot-person-sitting-cable-car-snowy-mountain.jpg"
+              alt="Jackets for men"
+              class="jackets-men"
+            />
+            <div class="jackets-men-caption">Men</div>
+          </a>
+        </div>
+        <div class="jackets-women">
+          <a href="women.html">
+            <img
+              src="images/frontpage/shot-model-enjoying-fresh-air-beach-cold-autumn-day.jpg"
+              alt="Jackets for women"
+              class="jackets-women"
+            />
+            <div class="jackets-women-caption">Women</div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-box">
+        <div>
+          <ul>
+            <li>SHOP</li>
+            <li><a href="women.html">Jackets Women</a></li>
+            <li><a href="men.html">Jackets Men</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>ABOUT US</li>
+            <li><a href="about.html">Who we are</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>HELP</li>
+            <li><a href="contact.html">Contact us</a></li>
+          </ul>
+        </div>
+        <div id="signUp">
+          <ul>
+            <li>SIGN UP and get 10 % off your first purchase</li>
           </ul>
         </div>
       </div>
-    </div>
-    <div class="header-bottom">
-      <img id="logo-bottom" src="images/logo/RainyDays_Logo-bottom.png" />
-      <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbtn">
-            Our Jackets
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="men.html">Men</a>
-            <a href="women.html">Women</a>
-          </div>
+
+      <div class="some-footer">
+        <div>
+          <img src="images/icons/facebook-icon.svg" />
         </div>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact us</a>
+        <div>
+          <img src="images/icons/instagram-icon.svg" />
+        </div>
+        <div>
+          <img src="images/icons/linkedin-icon.svg" />
+        </div>
       </div>
-    </div>
-  </header>
-
-  <section class="welcome">
-    <p class="welcome-text">Jackets for your next adventure</p>
-  </section>
-
-  <main>
-    <section class="jackets">
-      <div class="jackets-men">
-        <a href="men.html">
-          <img src="images/frontpage/low-angle-shot-person-sitting-cable-car-snowy-mountain.jpg" alt="Jackets for men"
-            class="jackets-men" />
-          <div class="jackets-men-caption">Men</div>
-        </a>
+      <div class="logo-footer">
+        <img src="images/logo/RainyDays_Logo.png" />
       </div>
-      <div class="jackets-women">
-        <a href="women.html">
-          <img src="images/frontpage/shot-model-enjoying-fresh-air-beach-cold-autumn-day.jpg" alt="Jackets for women"
-            class="jackets-women" />
-          <div class="jackets-women-caption">Women</div>
-        </a>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="footer-box">
-      <div>
-        <ul>
-          <li>SHOP</li>
-          <li><a href="women.html">Jackets Women</a></li>
-          <li><a href="men.html">Jackets Men</a></li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li>ABOUT US</li>
-          <li><a href="about.html">Who we are</a></li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li>HELP</li>
-          <li><a href="contact.html">Contact us</a></li>
-        </ul>
-      </div>
-      <div id="signUp">
-        <ul>
-          <li>SIGN UP and get 10 % off your first purchase</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="some-footer">
-      <div>
-        <img src="images/icons/facebook-icon.svg" />
-      </div>
-      <div>
-        <img src="images/icons/instagram-icon.svg" />
-      </div>
-      <div>
-        <img src="images/icons/linkedin-icon.svg" />
-      </div>
-    </div>
-    <div class="logo-footer">
-      <img src="images/logo/RainyDays_Logo.png" />
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
