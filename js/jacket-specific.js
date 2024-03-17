@@ -11,3 +11,4 @@ function insertProductImage(color) {
 }
 
 insertProductImage("dusty-rose");
+console.log(product.id);
