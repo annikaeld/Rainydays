@@ -33,12 +33,19 @@ function getIdQueryParameter() {
 }
 
 async function productFromApi(id) {
-  let url = `https://v2.api.noroff.dev/rainy-days/${id}`;
-  const response = await fetch(url);
-  const jsonResponse = await response.json();
-  let product = jsonResponse.data;
-  console.log(product);
-  return product;
+  try {
+    let url = `https://v2.api.noroff.dev/rainy-days/${id}`;
+    const response = await fetch(url);
+    const jsonResponse = await response.json();
+    let product = jsonResponse.data;
+    console.log(product);
+    return product;
+  } catch (error) {
+    console.log("An error occurred");
+    productList.innerHTML = displayError(
+      "An error occurred when calling the API"
+    );
+  }
 }
 
 const id = getIdQueryParameter();

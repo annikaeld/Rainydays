@@ -420,6 +420,7 @@
 
   .product img {
     width: 100%;
+    max-height: 300px;
   }
 
   .product {
@@ -646,7 +647,7 @@
     box-sizing: border-box;
     padding: 66px;
     font-family: 'Roboto Mono', monospace;
-    max-width: 30%;
+
   }
 
   #check-out-product-image {
@@ -728,8 +729,18 @@
   /*footer*/
 
   footer {
+    margin-top: auto;
     background-color: #E4F5FB;
     color: #0A3641;
+  }
+
+  .error {
+    border: 1px solid darkred;
+    padding: 1rem;
+    color: darkred;
+    background: rgba(255, 0, 0, 0.1);
+    margin: 2rem 0;
+    font-family: 'Roboto Mono', monospace;
   }
 
 }
