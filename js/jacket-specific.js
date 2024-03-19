@@ -41,8 +41,11 @@ async function productFromApi(id) {
     console.log(product);
     return product;
   } catch (error) {
+    const productSpecificDetails = document.querySelector(
+      ".product-specific__details"
+    );
     console.log("An error occurred");
-    productList.innerHTML = displayError(
+    productSpecificDetails.innerHTML = displayError(
       "An error occurred when calling the API"
     );
   }
