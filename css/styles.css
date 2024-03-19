@@ -646,6 +646,7 @@
     box-sizing: border-box;
     padding: 66px;
     font-family: 'Roboto Mono', monospace;
+    max-width: 30%;
   }
 
   #check-out-product-image {
@@ -657,12 +658,12 @@
 
   .product-specific {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
     margin: 50px 0 0px 0;
   }
 
-  .product-specific--jacket{
+  .product-specific--jacket {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -688,10 +689,11 @@
     text-align: left;
     padding-left: 65px;
   }
-  
+
   .more-details {
     padding-bottom: 50px;
   }
+
   .content {
     margin: 0px 30px 0px 0px;
     font-family: 'jost', sans-serif;
