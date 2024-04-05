@@ -27,7 +27,7 @@ export async function productFromApi(id) {
 }
 
 export async function fetchProducts() {
-  const url = "https://v2.api.dnoroff.dev/rainy-days/";
+  const url = "https://v2.api.noroff.dev/rainy-days/";
   try {
     const response = await fetch(url);
     const jsonResponse = await response.json();
