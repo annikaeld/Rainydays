@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Rainydays | Women</title>
+  <title>Product details</title>
   <meta name="description" content="The official home page of Rainydays - we offer jackets for your next adventure.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,18 +70,56 @@
       </div>
     </div>
   </header>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><b>Jackets Women</b></li>
-    </ul>
-  </nav>
-  <section class="women">
-    <h1>Women</h1>
-  </section>
-  <section class="product-list">
-    <div class="product">
+  <h1>Product details</h1>
+  <div class="product-specific">
+    <section class="product-specific--jacket">
+    </section>
+    <section class="product-specific__details">
       ..loading...
+    </section>
+  </div>
+
+  <section class="accordion more-details">
+    <input type="checkbox" name="collapse" id="handle_details" checked="checked">
+    <h2 class="handle">
+      <label for="handle_details">More details</label>
+    </h2>
+    <div class="content">
+      <ul>
+        <li>100% Recycled Waterproof/Breathable Face Fabric</li>
+        <li>
+          Waterproof/breathable H2No® Performance Standard 3-layer shell with
+          a PFC-free DWR finish (durable water repellent coating that does not
+          contain perfluorinated chemicals) provides the highest levels of
+          comfort and performance, and long-term waterproof durability; Fair
+          Trade Certified™ sewn
+        </li>
+        <li>
+          Two-way-adjustable hood with a laminated visor rolls down and stows
+          with a simplified cord-and-hook design
+        </li>
+        <li>
+          Microfleece-lined neck provides comfort and protects with a
+          waterproof/breathable barrier
+        </li>
+        <li>
+          Snag-free center-front zipper with external and internal storm flaps
+          and zipper-garage chin guard
+        </li>
+        <li>
+          Two handwarmer pockets and venting pit zips with welted exterior
+          storm flaps
+        </li>
+        <li>
+          Self-fabric hook-and-loop cuff closures and an adjustable drawcord
+          hem seal out precipitation
+        </li>
+        <li>
+          Jacket self-stuffs into left handwarmer pocket with carabiner
+          clip-in loop
+        </li>
+      </ul>
+      <p>Country of Origin Made in Vietnam. Weight 352 g (12.4 oz)</p>
     </div>
   </section>
   <footer>
@@ -126,7 +164,8 @@
       <img src="images/logo/RainyDays_Logo.png" alt="RainyDays-Logo">
     </div>
   </footer>
-  <script src="js/women.js" type="module"></script>
+  <script src="js/components/displayError.js"></script>
+  <script src="js/jacket-specific-1.js" type="module"></script>
 </body>
 
 </html>

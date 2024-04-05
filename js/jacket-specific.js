@@ -1,58 +1,10 @@
-function insertProductImage(color) {
-  const productSpecificJacket = document.querySelector(
-    ".product-specific--jacket"
-  );
-  console.log("productSpecificJacket: " + productSpecificJacket);
-
-  productSpecificJacket.innerHTML = `
-      <img src=${product.image.url}>
-      `;
-  console.log("innerHTML is now:" + productSpecificJacket.innerHTML);
-}
-
-function insertProductText(text) {
-  const productSpecificDetails = document.querySelector(
-    ".product-specific__details"
-  );
-  console.log("productSpecificDetails: " + productSpecificDetails);
-
-  productSpecificDetails.innerHTML = `<h3>${product.title}</h3>
-  <p class="description-header">Description:</p>
-  <p class="description-paragraph">
-    ${product.description}
-  </p>
-  <a href="check-out.html" class="cta">Add to cart</a>`;
-  console.log("innerHTML is now:" + productSpecificDetails.innerHTML);
-}
-
-function getIdQueryParameter() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const idParam = urlParams.get("id");
-  console.log(idParam);
-  return idParam;
-}
-
-async function productFromApi(id) {
-  try {
-    let url = `https://v2.api.noroff.dev/rainy-days/${id}`;
-    const response = await fetch(url);
-    const jsonResponse = await response.json();
-    let product = jsonResponse.data;
-    console.log(product);
-    return product;
-  } catch (error) {
-    const productSpecificDetails = document.querySelector(
-      ".product-specific__details"
-    );
-    console.log("An error occurred");
-    productSpecificDetails.innerHTML = displayError(
-      "An error occurred when calling the API"
-    );
-  }
-}
+import { getIdQueryParameter } from "./api/rainyDaysApi.js";
+import { productFromApi } from "./api/rainyDaysApi.js";
+import { insertProductImage } from "./ui/renderProduct.js";
+import { insertProductText } from "./ui/renderProduct.js";
 
 const id = getIdQueryParameter();
 const product = await productFromApi(id);
 console.log(product);
-insertProductImage();
-insertProductText();
+insertProductImage(product);
+insertProductText(product);
