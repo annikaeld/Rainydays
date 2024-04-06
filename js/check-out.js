@@ -29,17 +29,20 @@ function = updateCart(){
 
 function renderCartItems() {
   cart.forEach((item) => {
+     cartItems.innerHTML = "" ; // clear cart
     cartItems.innerHTML += `
           <div class="product-specific--check-out">
-          <img src="${product.image.url}" alt="White Jacket" id="check-out-product-image"
+          <img src="${product.image.url}" alt="${product.description}" id="check-out-product-image"
             class="product-image">
           <div class="product-text">
-            <p>Patagonia Torrentshell 3L Jacket</p>
-            <p>kr 1598,-</p>
-            <p>Quantity: 1</p>
+            <p>${product.title}</p>
+            <p>${product.price} kr</p>
+            <p>Quantity: ${numberOfUnits}</p>
           </div>
-          <i class="fa-regular fa-trash-can"></i> `
+          <i class="fa-regular fa-trash-can" onclick="removeItem()"></i> `
   });
 }
+
+function removeItem(id)
 
 

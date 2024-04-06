@@ -15,7 +15,8 @@ export async function productFromApi(id) {
     let product = jsonResponse.data;
     console.log(product);
     return product;
-  } catch (error) {
+  } 
+  catch (error) {
     const productSpecificDetails = document.querySelector(
       ".product-specific__details"
     );
@@ -33,7 +34,8 @@ export async function fetchProducts() {
     const jsonResponse = await response.json();
     const data = jsonResponse.data;
     return data;
-  } catch (error) {
+  }
+  catch (error) {
     const productList = document.querySelector(".product-list");
     console.log(productList);
     console.log("An error occurred");
