@@ -429,13 +429,9 @@
   }
 
   .product {
-    border-color: #F5F5F5;
     max-width: 1000px;
     margin: 8px;
     padding: 8px;
-    border-width: 2px;
-    border-style: groove;
-    border-radius: 3px;
   }
 
   .product a {
