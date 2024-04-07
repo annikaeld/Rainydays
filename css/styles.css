@@ -536,7 +536,7 @@
     max-width: 1000px;
     margin: 0px auto;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
   }
 
   .products {
@@ -653,6 +653,13 @@
   .fa-plus:hover,
   .fa-minus:hover {
     cursor: pointer;
+  }
+
+  .form-error {
+    display: none;
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 2px;
   }
 
   /*jacket specific*/
