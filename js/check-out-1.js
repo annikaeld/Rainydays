@@ -58,9 +58,30 @@ function removeItemFromCart(id) {
 }
 window.removeItemFromCart = removeItemFromCart; //Make this available from onClick (window object)
 
+function renderSubtotal() {
+  console.log("renderSubtotal");
+  let cart = getExistingCartFromLocalStorage();
+  let totalPrice = 0,
+    totalItems = 0;
+
+  cart.forEach((item) => {
+    totalPrice += item.price * item.numberOfUnits;
+    totalItems += item.numberOfUnits;
+  });
+  console.log("Total price: " + totalPrice);
+  console.log("Total items: " + totalItems);
+
+  const totalSection = document.querySelector(".totals");
+  totalSection.innerHTML = `Subtotal (${totalItems} items): ${totalPrice.toFixed(
+    2
+    )} kr`;
+}
+
 function updateCart() {
   renderCartItems();
+  renderSubtotal();
 }
+
 function changeNumberOfUnits(action, id) {
   console.log("ChangeNumberOfUnits " + action + id);
   let cart = getExistingCartFromLocalStorage();
@@ -127,4 +148,4 @@ function saveExistingCartToLocalStorage(cart) {
 }
 
 await addGivenProductToCart();
-renderCartItems();
+updateCart();
