@@ -429,10 +429,11 @@
   }
 
   .product {
-    background-color: #F5F5F5;
+    border-color: #F5F5F5;
     max-width: 1000px;
     margin: 8px;
     padding: 8px;
+    border-width: 2px;
   }
 
   .product a {
