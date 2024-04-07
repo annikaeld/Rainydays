@@ -76,27 +76,31 @@
       <div class="product-specific--check-out">
         <!-- loaded from script -->
       </div>
-      <!-- <div class="totals"></div> -->
-    </section>
-    <section class="check-out--info">
-      <div class="check-out--info-inner">
-        <form class="buy-success" action="buy-success.php" method="POST">
-          <label class="no-label" for="email">email</label>
-          <input id="email" name="email" placeholder="Your email address" type="email" class="form__input 1" required>
-          <label class="no-label" for="ccn">ccn</label>
-          <input id="ccn" name="ccn" placeholder="Credit Card Number" type="text" class="form__input 2" maxlength="16"
-            required>
-          <div class="last-digits">
-            <label class="no-label" for="mm/yy">mm/yy</label>
-            <input id="mm/yy" name="mm/yy" placeholder="MM/YY" class="form__input 3" type="tel" maxlength="4" required>
-            <label class="no-label" for="cvc">cvc</label>
-            <input id="cvc" name="cvc" placeholder="CVC" class="form__input 4" type="tel" maxlength="3" required>
-          </div>
-          <a href="check-out-sucess.html" class="cta check-out-button">Buy now</a>
-        </form>
+      <div class="check-out--info">
+        <div class="check-out--info-list">
+        </div>
+        <div class="check-out--info-inner">
+          <form class="buy-success" action="buy-success.php" method="POST">
+            <label class="no-label" for="email">email</label>
+            <input id="email" name="email" placeholder="Your email address" type="email" class="form__input 1" required>
+            <label class="no-label" for="ccn">ccn</label>
+            <input id="ccn" name="ccn" placeholder="Credit Card Number" type="text" class="form__input 2" maxlength="16"
+              required>
+            <div class="last-digits">
+              <label class="no-label" for="mm/yy">mm/yy</label>
+              <input id="mm/yy" name="mm/yy" placeholder="MM/YY" class="form__input 3" type="tel" maxlength="4"
+                required>
+              <label class="no-label" for="cvc">cvc</label>
+              <input id="cvc" name="cvc" placeholder="CVC" class="form__input 4" type="tel" maxlength="3" required>
+            </div>
+            <a href="check-out-sucess.html" class="cta check-out-button">Buy now</a>
+          </form>
+        </div>
       </div>
-      </div>
     </section>
+    <div class="totals">Subtotal (${totalItems} items): ${totalPrice.toFixed(
+      2
+      )} kr</div>
   </main>
   <footer>
     <div class="footer-box">
@@ -109,7 +113,7 @@
       </div>
       <div>
         <ul>
-          <li>ABOUT US</li>
+          <li onclick="hitMinus()">ABOUT US</li>
           <li><a href="about.html">Who we are</a></li>
         </ul>
       </div>

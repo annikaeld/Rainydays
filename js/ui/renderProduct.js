@@ -23,6 +23,6 @@ export function insertProductText(product) {
     <p class="description-paragraph">
       ${product.description}
     </p>
-    <a href="check-out-1.html?id=${product.id}" class="cta" onclick="addToCart(${product.id})">Add to cart</a>`;
+    <a href="check-out.html?id=${product.id}" class="cta" onclick="addToCart(${product.id})">Add to cart</a>`;
   console.log("innerHTML is now:" + productSpecificDetails.innerHTML);
 }

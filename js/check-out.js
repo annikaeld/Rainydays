@@ -1,94 +1,151 @@
-const cartItems = document.querySelector(".check-out");
-const subTotal = document.querySelector(".totals");
+import { getIdQueryParameter } from "./api/rainyDaysApi.js";
+import { productFromApi } from "./api/rainyDaysApi.js";
 
-//cart array
-let cart = JSON.parse(localStorage.getItem("CART")) || [];
-updateCart();
+function shoppingCartItem(product) {
+  const item = {
+    id: product.id,
+    title: product.title,
+    description: product.description,
+    price: product.price,
+    imageurl: product.image.url,
+    numberOfUnits: 1,
+  };
+  return item;
+}
 
-export function addToCart(id) {
-  //check if product already is in cart
-  if (cart.some((item) => item.id === id)) {
-    changeNumberOfUnits("plus", id);
-  } else {
-    const item = products.find((products) => products.id === id);
-    cart.push({
-      ...item,
-      numberOfUnits: 1,
-    });
+function getExistingCartFromLocalStorage() {
+  const cart = localStorage.getItem("RainyDaysCart");
+  console.log("getExistingCartFromLocalStorage");
+  if (cart === undefined) {
+    console.log("cart is undefined");
   }
+  console.log(cart);
+  if (cart === null) {
+    return [];
+  } else if (cart != undefined) {
+    return JSON.parse(cart);
+  }
+}
 
+function addToCart(newItem) {
+  console.log("addToCart");
+  let cart = getExistingCartFromLocalStorage();
+  console.log("1");
+  console.log(cart);
+  if (cart != null) {
+    //check if product already is in cart
+    if (cart.some((item) => item.id === newItem.id)) {
+      changeNumberOfUnits("plus", newItem.id);
+    } else {
+      cart.push(newItem);
+      saveExistingCartToLocalStorage(cart);
+    }
+    console.log("2");
+    console.log(cart);
+    console.log("3");
+    updateCart();
+  }
+  console.log(cart);
+  console.log("addToCart finish");
+}
+
+function removeItemFromCart(id) {
+  console.log("removeItemFromCart");
+  let cart = getExistingCartFromLocalStorage();
+  cart = cart.filter((item) => item.id !== id);
+  saveExistingCartToLocalStorage(cart);
   updateCart();
 }
-
-//update cart
-
-function updateCart() {
-  renderCartItems();
-  renderSubtotal();
-
-  //save cart to local storage
-  localStorage.setItem("CART", JSON.stringify(cart));
-}
-
-//calculate subtotal
+window.removeItemFromCart = removeItemFromCart; //Make this available from onClick (window object)
 
 function renderSubtotal() {
+  console.log("renderSubtotal");
+  let cart = getExistingCartFromLocalStorage();
   let totalPrice = 0,
     totalItems = 0;
 
   cart.forEach((item) => {
-    total += item.price * item.numberOfUnits;
+    totalPrice += item.price * item.numberOfUnits;
     totalItems += item.numberOfUnits;
   });
+  console.log("Total price: " + totalPrice);
+  console.log("Total items: " + totalItems);
 
-  subTotal.innerHTML = `Subtotal (${totalItems} items): ${totalPrice.toFixed(
+  const totalSection = document.querySelector(".totals");
+  totalSection.innerHTML = `Subtotal (${totalItems} items): ${totalPrice.toFixed(
     2
   )} kr`;
 }
 
-//render cart items
-
-function renderCartItems() {
-  cart.forEach((item) => {
-    cartItems.innerHTML = ""; // clear cart
-    cartItems.innerHTML += `
-          <div class="product-specific--check-out">
-          <img src="${product.image.url}" alt="${product.description}" id="check-out-product-image"
-            class="product-image">
-          <div class="product-text">
-            <p>${product.title}</p>
-            <p>${product.price} kr</p>
-            <p>Quantity: <i class="fa-solid fa-minus" onclick="changeNumberOfUnits('minus', ${item.id})"></i> ${numberOfUnits} <i class="fa-solid fa-plus" onclick="changeNumberOfUnits('plus', ${item.id})"></i>"></p>
-          </div>
-          <i class="fa-regular fa-trash-can" onclick="removeItemFromCart(${item.id})"></i>
-          <div class="totals"></div>`;
-  });
+function updateCart() {
+  renderCartItems();
+  renderSubtotal();
 }
 
-//remove item from cart
-function removeItemFromCart(id) {
-  cart = cart.filter((item) => item.id !== id);
-
-  updateCart();
-}
-
-function changeNumberOfUnits(id) {
+function changeNumberOfUnits(action, id) {
+  console.log("ChangeNumberOfUnits " + action + id);
+  let cart = getExistingCartFromLocalStorage();
+  console.log(cart);
   cart = cart.map((item) => {
-    let numberOfUnits = item.numberOfUnits;
-
     if (item.id === id) {
-      if (action === "minus" && numberOfUnits > 1) {
-        numberOfUnits--;
+      if (action === "minus" && item.numberOfUnits > 1) {
+        console.log("minus");
+        item.numberOfUnits--;
+        if (item.numberOfUnits === 0) {
+          removeItemFromCart(id);
+        }
       } else if (action === "plus") {
-        numberOfUnits++;
+        console.log("plus");
+        item.numberOfUnits++;
       }
     }
-
-    return {
-      ...item,
-      numberOfUnits: numberOfUnits,
-    };
+    saveExistingCartToLocalStorage(cart);
   });
 
   updateCart();
 }
+window.changeNumberOfUnits = changeNumberOfUnits; //Make this available from onClick (window object)
+
+async function addGivenProductToCart() {
+  const id = getIdQueryParameter();
+  if (id != null) {
+    const product = await productFromApi(id);
+    if (product != undefined) {
+      const cartItem = shoppingCartItem(product);
+      addToCart(cartItem);
+    }
+  }
+}
+
+function renderCartItems() {
+  console.log("renderCartItems");
+  let cart = getExistingCartFromLocalStorage();
+  const cartItems = document.querySelector(".product-specific--check-out");
+  cartItems.innerHTML = ""; // clear cart
+  cart.forEach((item) => {
+    cartItems.innerHTML += `
+            <div class="products">
+            <img src="${item.imageurl}" alt="${item.description}" id="check-out-product-image"
+              class="product-image">
+            <div class="product-text">
+              <p>${item.title}</p>
+              <p>${item.price} kr</p>
+              <p>Quantity:
+              <i class="fa-solid fa-minus" onclick="changeNumberOfUnits('minus', '${item.id}')"></i> 
+              ${item.numberOfUnits} 
+              <i class="fa-solid fa-plus" onclick="changeNumberOfUnits('plus', '${item.id}')"></i></p>
+            </div>
+            <i class="fa-regular fa-trash-can" onclick="removeItemFromCart('${item.id}')"></i>
+            </div>`;
+  });
+  console.log("renderCartItems finish");
+}
+
+function saveExistingCartToLocalStorage(cart) {
+  console.log("Save cart");
+  console.log(JSON.stringify(cart));
+  localStorage.setItem("RainyDaysCart", JSON.stringify(cart));
+}
+
+await addGivenProductToCart();
+updateCart();
