@@ -527,24 +527,24 @@
   /*checkout*/
   .product-specific--check-out,
   .check-out--info {
-    background-color: #F5F5F5;
     box-sizing: border-box;
     width: 100%;
   }
 
   .check-out {
     display: flex;
-    flex-direction: column;
     max-width: 1000px;
     margin: 0px auto;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .product-specific--check-out {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  .products {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 2fr 2fr 1fr;
+    margin: 1rem;
     align-items: center;
-    margin-right: 10px;
   }
 
   .check-out--info {
@@ -552,7 +552,6 @@
     flex-direction: column;
     align-items: center;
     padding: 50px;
-    background-color: #FFF
   }
 
   .product-image {
@@ -638,6 +637,16 @@
 
   .check-out-button {
     width: 40%;
+  }
+
+  .totals {
+    margin: auto;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #E4F5FB;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: large;
+    padding: 1rem;
   }
 
   /*jacket specific*/

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Product details</title>
+  <title>Rainydays | Check-Out</title>
   <meta name="description" content="The official home page of Rainydays - we offer jackets for your next adventure.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,58 +70,38 @@
       </div>
     </div>
   </header>
-  <h1>Product details</h1>
-  <div class="product-specific">
-    <section class="product-specific--jacket">
+  <main>
+    <h1>Check-Out</h1>
+    <section class="check-out">
+      <div class="product-specific--check-out">
+        <!-- loaded from script -->
+      </div>
+      <div class="check-out--info">
+        <div class="check-out--info-list">
+        </div>
+        <div class="check-out--info-inner">
+          <form class="buy-success" action="buy-success.php" method="POST">
+            <label class="no-label" for="email">email</label>
+            <input id="email" name="email" placeholder="Your email address" type="email" class="form__input 1" required>
+            <label class="no-label" for="ccn">ccn</label>
+            <input id="ccn" name="ccn" placeholder="Credit Card Number" type="text" class="form__input 2" maxlength="16"
+              required>
+            <div class="last-digits">
+              <label class="no-label" for="mm/yy">mm/yy</label>
+              <input id="mm/yy" name="mm/yy" placeholder="MM/YY" class="form__input 3" type="tel" maxlength="4"
+                required>
+              <label class="no-label" for="cvc">cvc</label>
+              <input id="cvc" name="cvc" placeholder="CVC" class="form__input 4" type="tel" maxlength="3" required>
+            </div>
+            <a href="check-out-sucess.html" class="cta check-out-button">Buy now</a>
+          </form>
+        </div>
+      </div>
     </section>
-    <section class="product-specific__details">
-      ..loading...
-    </section>
-  </div>
-
-  <section class="accordion more-details">
-    <input type="checkbox" name="collapse" id="handle_details" checked="checked">
-    <h2 class="handle">
-      <label for="handle_details">More details</label>
-    </h2>
-    <div class="content">
-      <ul>
-        <li>100% Recycled Waterproof/Breathable Face Fabric</li>
-        <li>
-          Waterproof/breathable H2No® Performance Standard 3-layer shell with
-          a PFC-free DWR finish (durable water repellent coating that does not
-          contain perfluorinated chemicals) provides the highest levels of
-          comfort and performance, and long-term waterproof durability; Fair
-          Trade Certified™ sewn
-        </li>
-        <li>
-          Two-way-adjustable hood with a laminated visor rolls down and stows
-          with a simplified cord-and-hook design
-        </li>
-        <li>
-          Microfleece-lined neck provides comfort and protects with a
-          waterproof/breathable barrier
-        </li>
-        <li>
-          Snag-free center-front zipper with external and internal storm flaps
-          and zipper-garage chin guard
-        </li>
-        <li>
-          Two handwarmer pockets and venting pit zips with welted exterior
-          storm flaps
-        </li>
-        <li>
-          Self-fabric hook-and-loop cuff closures and an adjustable drawcord
-          hem seal out precipitation
-        </li>
-        <li>
-          Jacket self-stuffs into left handwarmer pocket with carabiner
-          clip-in loop
-        </li>
-      </ul>
-      <p>Country of Origin Made in Vietnam. Weight 352 g (12.4 oz)</p>
-    </div>
-  </section>
+    <div class="totals">Subtotal (${totalItems} items): ${totalPrice.toFixed(
+      2
+      )} kr</div>
+  </main>
   <footer>
     <div class="footer-box">
       <div>
@@ -133,7 +113,7 @@
       </div>
       <div>
         <ul>
-          <li>ABOUT US</li>
+          <li onclick="hitMinus()">ABOUT US</li>
           <li><a href="about.html">Who we are</a></li>
         </ul>
       </div>
@@ -164,8 +144,7 @@
       <img src="images/logo/RainyDays_Logo.png" alt="RainyDays-Logo">
     </div>
   </footer>
-  <script src="js/jacket-specific.js" type="module"></script>
-  <!-- <script src="js/check-out.js" type="module"></script> -->
+  <script src="js/check-out-1.js" type="module"></script>
 </body>
 
 </html>

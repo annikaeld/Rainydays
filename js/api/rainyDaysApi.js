@@ -3,7 +3,6 @@ import { displayError } from "../ui/displayError.js";
 export function getIdQueryParameter() {
   const urlParams = new URLSearchParams(window.location.search);
   const idParam = urlParams.get("id");
-  console.log(idParam);
   return idParam;
 }
 

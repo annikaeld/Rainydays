@@ -135,6 +135,7 @@
     .product-specific--check-out {
         display: flex;
         align-items: center;
+        flex-direction: column;
     }
 
     .product-specific__details {
