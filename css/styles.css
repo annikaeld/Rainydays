@@ -434,6 +434,8 @@
     margin: 8px;
     padding: 8px;
     border-width: 2px;
+    border-style: groove;
+    border-radius: 3px;
   }
 
   .product a {
