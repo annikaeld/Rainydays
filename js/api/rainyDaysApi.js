@@ -6,7 +6,7 @@ export function getIdQueryParameter() {
   return idParam;
 }
 
-export async function productFromApi(id) {
+export async function productFromApi(id, errorContainer) {
   try {
     let url = `https://v2.api.noroff.dev/rainy-days/${id}`;
     const response = await fetch(url);
@@ -16,11 +16,12 @@ export async function productFromApi(id) {
   } 
   catch (error) {
     const productSpecificDetails = document.querySelector(
-      ".product-specific__details"
+      errorContainer
     );
     productSpecificDetails.innerHTML = displayError(
       "An error occurred when calling the API"
     );
+    console.log("An error occurred when calling the API");
   }
 }
 

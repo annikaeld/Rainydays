@@ -5,7 +5,7 @@ import { insertProductText } from "./ui/renderProduct.js";
 import { setPageTitle } from "./ui/setPageTitle.js";
 
 const id = getIdQueryParameter();
-const product = await productFromApi(id);
+const product = await productFromApi(id, ".product-specific__details");
 insertProductImage(product);
 insertProductText(product);
 setPageTitle(product.title);
