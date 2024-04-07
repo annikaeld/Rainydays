@@ -64,9 +64,6 @@ function changeNumberOfUnits(action, id) {
     if (item.id === id) {
       if (action === "minus" && item.numberOfUnits > 1) {
         item.numberOfUnits--;
-        if (item.numberOfUnits === 0) {
-          removeItemFromCart(id);
-        }
       } else if (action === "plus") {
         item.numberOfUnits++;
       }
