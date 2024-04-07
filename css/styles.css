@@ -649,6 +649,12 @@
     padding: 1rem;
   }
 
+  .fa-trash-can:hover,
+  .fa-plus:hover,
+  .fa-minus:hover {
+    cursor: pointer;
+  }
+
   /*jacket specific*/
 
   .product-specific--jacket {

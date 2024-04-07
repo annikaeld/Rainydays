@@ -74,7 +74,7 @@ function renderSubtotal() {
   const totalSection = document.querySelector(".totals");
   totalSection.innerHTML = `Subtotal (${totalItems} items): ${totalPrice.toFixed(
     2
-    )} kr`;
+  )} kr`;
 }
 
 function updateCart() {
