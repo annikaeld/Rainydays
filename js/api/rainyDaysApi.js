@@ -12,14 +12,12 @@ export async function productFromApi(id) {
     const response = await fetch(url);
     const jsonResponse = await response.json();
     let product = jsonResponse.data;
-    console.log(product);
     return product;
   } 
   catch (error) {
     const productSpecificDetails = document.querySelector(
       ".product-specific__details"
     );
-    console.log("An error occurred");
     productSpecificDetails.innerHTML = displayError(
       "An error occurred when calling the API"
     );
@@ -36,10 +34,7 @@ export async function fetchProducts() {
   }
   catch (error) {
     const productList = document.querySelector(".product-list");
-    console.log(productList);
-    console.log("An error occurred");
     const errorMessage = displayError("An error occured when calling the API");
-    console.log(errorMessage);
     productList.innerHTML = errorMessage;
   }
 }

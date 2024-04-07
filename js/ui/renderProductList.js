@@ -7,10 +7,8 @@ export async function renderProductList(gender) {
   if (data != null) {
     productList.innerHTML = "";
     for (let i = 0; i < data.length; i++) {
-      console.log(data[i].gender);
       let product = data[i];
       if (product.gender === gender) {
-        console.log(product.id);
 
         productList.innerHTML += `<div class="product">
      <a href="jacket-specific.html?id=${product.id}">

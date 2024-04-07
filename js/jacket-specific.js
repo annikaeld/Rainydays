@@ -6,7 +6,6 @@ import { setPageTitle } from "./ui/setPageTitle.js";
 
 const id = getIdQueryParameter();
 const product = await productFromApi(id);
-console.log(product);
 insertProductImage(product);
 insertProductText(product);
 setPageTitle(product.title);

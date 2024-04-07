@@ -15,11 +15,8 @@ function shoppingCartItem(product) {
 
 function getExistingCartFromLocalStorage() {
   const cart = localStorage.getItem("RainyDaysCart");
-  console.log("getExistingCartFromLocalStorage");
   if (cart === undefined) {
-    console.log("cart is undefined");
   }
-  console.log(cart);
   if (cart === null) {
     return [];
   } else if (cart != undefined) {
@@ -28,10 +25,7 @@ function getExistingCartFromLocalStorage() {
 }
 
 function addToCart(newItem) {
-  console.log("addToCart");
   let cart = getExistingCartFromLocalStorage();
-  console.log("1");
-  console.log(cart);
   if (cart != null) {
     //check if product already is in cart
     if (cart.some((item) => item.id === newItem.id)) {
@@ -40,17 +34,11 @@ function addToCart(newItem) {
       cart.push(newItem);
       saveExistingCartToLocalStorage(cart);
     }
-    console.log("2");
-    console.log(cart);
-    console.log("3");
     updateCart();
   }
-  console.log(cart);
-  console.log("addToCart finish");
 }
 
 function removeItemFromCart(id) {
-  console.log("removeItemFromCart");
   let cart = getExistingCartFromLocalStorage();
   cart = cart.filter((item) => item.id !== id);
   saveExistingCartToLocalStorage(cart);
@@ -59,7 +47,6 @@ function removeItemFromCart(id) {
 window.removeItemFromCart = removeItemFromCart; //Make this available from onClick (window object)
 
 function renderSubtotal() {
-  console.log("renderSubtotal");
   let cart = getExistingCartFromLocalStorage();
   let totalPrice = 0,
     totalItems = 0;
@@ -68,8 +55,6 @@ function renderSubtotal() {
     totalPrice += item.price * item.numberOfUnits;
     totalItems += item.numberOfUnits;
   });
-  console.log("Total price: " + totalPrice);
-  console.log("Total items: " + totalItems);
 
   const totalSection = document.querySelector(".totals");
   totalSection.innerHTML = `Subtotal (${totalItems} items): ${totalPrice.toFixed(
@@ -83,19 +68,15 @@ function updateCart() {
 }
 
 function changeNumberOfUnits(action, id) {
-  console.log("ChangeNumberOfUnits " + action + id);
   let cart = getExistingCartFromLocalStorage();
-  console.log(cart);
   cart = cart.map((item) => {
     if (item.id === id) {
       if (action === "minus" && item.numberOfUnits > 1) {
-        console.log("minus");
         item.numberOfUnits--;
         if (item.numberOfUnits === 0) {
           removeItemFromCart(id);
         }
       } else if (action === "plus") {
-        console.log("plus");
         item.numberOfUnits++;
       }
     }
@@ -118,7 +99,6 @@ async function addGivenProductToCart() {
 }
 
 function renderCartItems() {
-  console.log("renderCartItems");
   let cart = getExistingCartFromLocalStorage();
   const cartItems = document.querySelector(".product-specific--check-out");
   cartItems.innerHTML = ""; // clear cart
@@ -138,12 +118,9 @@ function renderCartItems() {
             <i class="fa-regular fa-trash-can" onclick="removeItemFromCart('${item.id}')"></i>
             </div>`;
   });
-  console.log("renderCartItems finish");
 }
 
 function saveExistingCartToLocalStorage(cart) {
-  console.log("Save cart");
-  console.log(JSON.stringify(cart));
   localStorage.setItem("RainyDaysCart", JSON.stringify(cart));
 }
 
