@@ -86,8 +86,8 @@
     }
 
     .product-list {
-        grid-template-columns: repeat(3, 1fr);
-        margin: auto;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 3rem auto;
     }
 
     .product {
@@ -191,76 +191,93 @@
     }
 
     /* jacket-specific */
+
     .product-specific {
-        flex-direction: row;
-    }
-
-}
-
-@media (min-width: 860px) {
-    .topnav-icons {
-        justify-content: flex-end;
-        width: 100%;
-    }
-
-    .topnav-icons>* {
-        padding: 0px 22px 5px 22px;
-    }
-
-    #searchform {
-        width: 220px;
-    }
-
-}
-
-@media (min-width: 1000px) {
-    .jackets-men-caption {
-        position: absolute;
-        top: 0;
-        left: 0;
-        text-transform: none;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%;
-        width: 100%;
-        color: #000;
-        font-family: Jost;
-        font-size: 54px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+        margin: 50px 0 0px 0;
     }
 
-    .jackets-women-caption {
-        position: absolute;
-        top: 0;
-        left: 0;
-        text-transform: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        color: #FFF;
-        font-family: Jost;
-        font-size: 54px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+    .product-specific--jacket img {
+        max-height: 30rem;
     }
 
-    h1.welcome-text {
-        margin-right: 53vw;
-        font-size: 4vh;
-        padding-top: 20px;
+    .content ul {
+        max-width: 50%;
+        margin: auto;
     }
 
 
-}
 
-@media (min-width: 1300px) {
-    .product-specific__details {
-        max-width: 30%;
+    @media (min-width: 860px) {
+        .topnav-icons {
+            justify-content: flex-end;
+            width: 100%;
+        }
+
+        .topnav-icons>* {
+            padding: 0px 22px 5px 22px;
+        }
+
+        #searchform {
+            width: 220px;
+        }
+
     }
-}
+
+    @media (min-width: 1000px) {
+        .jackets-men-caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-transform: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            color: #000;
+            font-family: Jost;
+            font-size: 54px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .jackets-women-caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-transform: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            color: #FFF;
+            font-family: Jost;
+            font-size: 54px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        h1.welcome-text {
+            margin-right: 53vw;
+            font-size: 4vh;
+            padding-top: 20px;
+        }
+
+        .product-list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+
+    }
+
+    @media (min-width: 1300px) {
+        .product-specific__details {
+            max-width: 30%;
+        }
+    }

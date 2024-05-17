@@ -683,13 +683,6 @@
     width: auto;
   }
 
-  .product-specific {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0 0px 0;
-  }
-
   .product-specific--jacket {
     display: flex;
     flex-direction: row;
@@ -698,7 +691,7 @@
   }
 
   .product-specific--jacket img {
-    max-height: 30rem;
+    max-width: 100%;
   }
 
   .description-header {
@@ -709,13 +702,6 @@
   .description-paragraph {
     margin-top: 5px;
     padding-bottom: 10px;
-  }
-
-  .handle label {
-    font-size: 20px;
-    padding: 0px;
-    display: flex;
-    justify-content: center;
   }
 
   .handle {
@@ -731,11 +717,6 @@
     margin: 0px 30px 0px 0px;
     font-family: 'jost', sans-serif;
     font-size: 16px;
-  }
-
-  .content ul {
-    max-width: 50%;
-    margin: auto;
   }
 
   .content li {
