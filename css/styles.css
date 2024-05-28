@@ -536,6 +536,7 @@
 
   .check-out {
     display: flex;
+    flex-direction: column;
     max-width: 1000px;
     margin: 0px auto;
     justify-content: space-between;
