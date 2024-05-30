@@ -2,6 +2,8 @@ import { getIdQueryParameter } from "./api/rainyDaysApi.js";
 import { productFromApi } from "./api/rainyDaysApi.js";
 import { renderCartItems } from "./ui/renderCartItems.js";
 import { getExistingCartFromLocalStorage } from "./ui/renderCartItems.js";
+import { validateEmail } from "./ui/validateEmail.js";
+import { checkLength } from "./ui/validateEmail.js";
 
 function shoppingCartItem(product) {
   const item = {
@@ -105,20 +107,6 @@ const mmyyError = document.querySelector("#mmyyError");
 const cvc = document.querySelector("#cvc");
 console.log("cvc:" + cvc);
 const cvcError = document.querySelector("#cvcError");
-
-function validateEmail(email) {
-  const regEx = /\S+@\S+\.\S+/;
-  const patternMatches = regEx.test(email);
-  return patternMatches;
-}
-
-function checkLength(value, len) {
-  if (value.trim().length >= len) {
-    return true;
-  } else {
-    return false;
-  }
-}
 
 function validateForm(event) {
   let isValid = true;
