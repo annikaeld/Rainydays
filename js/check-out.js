@@ -94,13 +94,16 @@ await addGivenProductToCart();
 updateCart();
 
 const form = document.querySelector("#buy");
+console.log("form:" + form);
 const email = document.querySelector("#email");
+console.log("email:" + email);
 const emailError = document.querySelector("#emailError");
 const ccn = document.querySelector("#ccn");
 const ccnError = document.querySelector("#ccnError");
 const mmyy = document.querySelector("#mmyy");
 const mmyyError = document.querySelector("#mmyyError");
 const cvc = document.querySelector("#cvc");
+console.log("cvc:" + cvc);
 const cvcError = document.querySelector("#cvcError");
 
 function validateEmail(email) {
@@ -117,32 +120,41 @@ function checkLength(value, len) {
   }
 }
 
-if (validateEmail(email.value) === true) {
-  emailError.style.display = "none";
-} else {
-  emailError.style.display = "block";
-}
-
 function validateForm(event) {
-  event.preventDeafault();
+  let isValid = true;
+
+  if (validateEmail(email.value) === true) {
+    emailError.style.display = "none";
+  } else {
+    emailError.style.display = "block";
+    isValid = false;
+  }
 
   if (checkLength(ccn.value, 16) === true) {
     ccnError.style.display = "none";
   } else {
     ccnError.style.display = "block";
+    isValid = false;
   }
 
   if (checkLength(mmyy.value, 4) === true) {
     mmyyError.style.display = "none";
   } else {
     mmyyError.style.display = "block";
+    isValid = false;
   }
 
   if (checkLength(cvc.value, 3) === true) {
     cvcError.style.display = "none";
   } else {
     cvcError.style.display = "block";
+    isValid = false;
+  }
+
+  // If the form is not valid, prevent it from being submitted
+  if (!isValid) {
+    event.preventDefault();
   }
 }
 
-form.addEventListener("click", validateForm);
+form.addEventListener("submit", validateForm);
