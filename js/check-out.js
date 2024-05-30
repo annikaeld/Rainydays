@@ -96,16 +96,13 @@ await addGivenProductToCart();
 updateCart();
 
 const form = document.querySelector("#buy");
-console.log("form:" + form);
 const email = document.querySelector("#email");
-console.log("email:" + email);
 const emailError = document.querySelector("#emailError");
 const ccn = document.querySelector("#ccn");
 const ccnError = document.querySelector("#ccnError");
 const mmyy = document.querySelector("#mmyy");
 const mmyyError = document.querySelector("#mmyyError");
 const cvc = document.querySelector("#cvc");
-console.log("cvc:" + cvc);
 const cvcError = document.querySelector("#cvcError");
 
 function validateForm(event) {

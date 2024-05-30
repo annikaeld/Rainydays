@@ -88,7 +88,7 @@
   <h1>Welcome to customer service</h1>
   <div class="contact">
     <section>
-      <form action="message-sent.php" method="POST">
+      <form id="contact" action="contact-sucess.html" method="GET" novalidate>
         <p>Contact us:</p>
         <div class="form-error" id="emailError">Please enter a valid email address</div>
         <label for="email"></label>
@@ -96,7 +96,7 @@
         <div class="form-error" id="messageError">Please enter a message</div>
         <label for="message"></label>
         <textarea id="message" placeholder="Your message" name="message" class="form__input"></textarea>
-        <a href="contact-sucess.html" class="cta">Send</a>
+        <button type="submit" class="cta">Send</button>
       </form>
     </section>
   </div>
