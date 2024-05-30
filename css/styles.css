@@ -668,6 +668,10 @@
 
   /*jacket specific*/
 
+  .product-specific {
+    padding: 5vw;
+  }
+
   .product-specific--jacket {
     background-color: #F5F5F5;
     box-sizing: border-box;
@@ -676,7 +680,7 @@
   .product-specific__details {
     background-color: #FFF;
     box-sizing: border-box;
-    padding: 66px;
+
     font-family: 'Roboto Mono', monospace;
 
   }
