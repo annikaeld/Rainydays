@@ -86,8 +86,10 @@
     <section>
       <form action="message-sent.php" method="POST">
         <p>Contact us:</p>
+        <div class="form-error" id="emailError">Please enter a valid email address</div>
         <label for="email"></label>
         <input id="email" type="email" placeholder="Your email address" name="email" class="form__input" required>
+        <div class="form-error" id="messageError">Please enter a message</div>
         <label for="message"></label>
         <textarea id="message" placeholder="Your message" name="message" class="form__input"></textarea>
         <a href="contact-sucess.html" class="cta">Send</a>
@@ -136,6 +138,7 @@
       <img src="images/logo/RainyDays_Logo.png" alt="RainyDays-Logo">
     </div>
   </footer>
+  <script src="js/contact.js" type="module"></script>
 </body>
 
 </html>

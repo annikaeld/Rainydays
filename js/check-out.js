@@ -92,3 +92,57 @@ function saveExistingCartToLocalStorage(cart) {
 
 await addGivenProductToCart();
 updateCart();
+
+const form = document.querySelector("#buy");
+const email = document.querySelector("#email");
+const emailError = document.querySelector("#emailError");
+const ccn = document.querySelector("#ccn");
+const ccnError = document.querySelector("#ccnError");
+const mmyy = document.querySelector("#mmyy");
+const mmyyError = document.querySelector("#mmyyError");
+const cvc = document.querySelector("#cvc");
+const cvcError = document.querySelector("#cvcError");
+
+function validateEmail(email) {
+  const regEx = /\S+@\S+\.\S+/;
+  const patternMatches = regEx.test(email);
+  return patternMatches;
+}
+
+function checkLength(value, len) {
+  if (value.trim().length >= len) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+if (validateEmail(email.value) === true) {
+  emailError.style.display = "none";
+} else {
+  emailError.style.display = "block";
+}
+
+function validateForm(event) {
+  event.preventDeafault();
+
+  if (checkLength(ccn.value, 16) === true) {
+    ccnError.style.display = "none";
+  } else {
+    ccnError.style.display = "block";
+  }
+
+  if (checkLength(mmyy.value, 4) === true) {
+    mmyyError.style.display = "none";
+  } else {
+    mmyyError.style.display = "block";
+  }
+
+  if (checkLength(cvc.value, 3) === true) {
+    cvcError.style.display = "none";
+  } else {
+    cvcError.style.display = "block";
+  }
+}
+
+form.addEventListener("click", validateForm);
