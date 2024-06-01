@@ -713,11 +713,12 @@
   }
 
   .handle {
-    text-align: center;
+    text-align: left;
   }
 
   .more-details {
     padding-bottom: 50px;
+    padding: 5vw;
   }
 
   .content {
