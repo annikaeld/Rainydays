@@ -1,9 +1,4 @@
 @media (min-width: 600px) {
-
-    h1.welcome-text {
-        background-color: rgba(255, 255, 255, 0.5);
-    }
-
     .header-top {
         margin-top: 5vh;
         height: 96.2px;
@@ -194,6 +189,7 @@
         margin-right: 60vw;
         font-size: 4vh;
         padding-top: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
     }
 
     /* jacket-specific */
