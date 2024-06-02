@@ -172,6 +172,7 @@
     .footer-box {
         margin-left: 15vw;
         margin-right: 15vw;
+        flex-direction: column;
     }
 
     .footer-box #signUp {
