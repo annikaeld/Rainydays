@@ -139,8 +139,9 @@
     }
 
     .product-specific__details {
-        margin-left: 15px;
+        margin-left: 25px;
         background-color: #F5F5F5;
+        padding: 0px 30px 30px 30px;
     }
 
     .check-out--info {
