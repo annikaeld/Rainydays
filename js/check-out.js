@@ -1,5 +1,5 @@
-import { getIdQueryParameter } from "./api/rainyDaysApi.js";
-import { productFromApi } from "./api/rainyDaysApi.js";
+import { getIdQueryParameter } from "./api/rainyDaysApiWoo.js";
+import { productFromApi } from "./api/rainyDaysApiWoo.js";
 import { renderCartItems } from "./ui/renderCartItems.js";
 import { getExistingCartFromLocalStorage } from "./ui/renderCartItems.js";
 import { validateEmail } from "./ui/formValidation.js";
@@ -8,10 +8,10 @@ import { checkLength } from "./ui/formValidation.js";
 function shoppingCartItem(product) {
   const item = {
     id: product.id,
-    title: product.title,
+    title: product.name,
     description: product.description,
     price: product.price,
-    imageurl: product.image.url,
+    imageurl: product.images[0].src,
     numberOfUnits: 1,
   };
   return item;
@@ -63,16 +63,22 @@ function updateCart() {
 function changeNumberOfUnits(action, id) {
   let cart = getExistingCartFromLocalStorage();
   cart = cart.map((item) => {
+    console.log("action", action);
     if (item.id === id) {
       if (action === "minus" && item.numberOfUnits > 1) {
         item.numberOfUnits--;
+        console.log("minus");
       } else if (action === "plus") {
+        console.log("Number of units before plus", item.numberOfUnits);
+        console.log("plus");
         item.numberOfUnits++;
+        console.log("Number of units after", item.numberOfUnits);
       }
     }
-    saveExistingCartToLocalStorage(cart);
+    console.log("number of units", item.numberOfUnits);
+    return item;
   });
-
+  saveExistingCartToLocalStorage(cart);
   updateCart();
 }
 window.changeNumberOfUnits = changeNumberOfUnits; //Make this available from onClick (window object)
@@ -81,6 +87,7 @@ async function addGivenProductToCart() {
   const id = getIdQueryParameter();
   if (id != null) {
     const product = await productFromApi(id, ".check-out");
+    console.log(product);
     if (product != undefined) {
       const cartItem = shoppingCartItem(product);
       addToCart(cartItem);
