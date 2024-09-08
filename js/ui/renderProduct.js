@@ -6,7 +6,7 @@ export function insertProductImage(product) {
   );
 
   productSpecificJacket.innerHTML = `
-        <img src=${product.image.url}>
+        <img src=${product.images[0].src}>
         `;
 }
 
@@ -15,7 +15,7 @@ export function insertProductText(product) {
     ".product-specific__details"
   );
 
-  productSpecificDetails.innerHTML = `<h3>${product.title}</h3>
+  productSpecificDetails.innerHTML = `<h3>${product.name}</h3>
     <p class="description-header">Description:</p>
     <p class="description-paragraph">
       ${product.description}

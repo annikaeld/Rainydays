@@ -1,5 +1,5 @@
-import { getIdQueryParameter } from "./api/rainyDaysApiWoo.js";
-import { productFromApi } from "./api/rainyDaysApiWoo.js";
+import { getIdQueryParameter } from "./api/rainyDaysApi.js";
+import { productFromApi } from "./api/rainyDaysApi.js";
 import { renderCartItems } from "./ui/renderCartItems.js";
 import { getExistingCartFromLocalStorage } from "./ui/renderCartItems.js";
 import { validateEmail } from "./ui/formValidation.js";
