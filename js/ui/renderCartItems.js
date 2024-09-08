@@ -3,7 +3,6 @@ export function renderCartItems() {
   const cartItems = document.querySelector(".product-specific--check-out");
   cartItems.innerHTML = ""; // clear cart
   cart.forEach((item) => {
-    console.log("item", item);
     cartItems.innerHTML += `
               <div class="products">
               <img src="${item.imageurl}" alt="${item.description}" id="check-out-product-image"

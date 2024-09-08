@@ -33,7 +33,7 @@ function addToCart(newItem) {
 
 function removeItemFromCart(id) {
   let cart = getExistingCartFromLocalStorage();
-  cart = cart.filter((item) => item.id !== id);
+  cart = cart.filter((item) => item.id != id);
   saveExistingCartToLocalStorage(cart);
   updateCart();
 }
@@ -63,19 +63,13 @@ function updateCart() {
 function changeNumberOfUnits(action, id) {
   let cart = getExistingCartFromLocalStorage();
   cart = cart.map((item) => {
-    console.log("action", action);
-    if (item.id === id) {
+    if (item.id == id) {
       if (action === "minus" && item.numberOfUnits > 1) {
         item.numberOfUnits--;
-        console.log("minus");
       } else if (action === "plus") {
-        console.log("Number of units before plus", item.numberOfUnits);
-        console.log("plus");
         item.numberOfUnits++;
-        console.log("Number of units after", item.numberOfUnits);
       }
     }
-    console.log("number of units", item.numberOfUnits);
     return item;
   });
   saveExistingCartToLocalStorage(cart);
@@ -87,7 +81,6 @@ async function addGivenProductToCart() {
   const id = getIdQueryParameter();
   if (id != null) {
     const product = await productFromApi(id, ".check-out");
-    console.log(product);
     if (product != undefined) {
       const cartItem = shoppingCartItem(product);
       addToCart(cartItem);
