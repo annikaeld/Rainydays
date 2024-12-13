@@ -7,9 +7,9 @@ export function getIdQueryParameter() {
 }
 
 export async function productFromApi(id, errorContainer) {
-  const apiUrl = `https://aurover.no/rainydays/app/public/wp-json/wc/v3/products/${id}`;
-  const consumerKey = "ck_bd67798e0bf1225148dbe5bb134cc0d30674bdac";
-  const consumerSecret = "cs_d8ddf0a454a1bcc37cdb5624675fd1b814ea7904";
+  const apiUrl = `https://rainydays-api.annikaeldoy.no/wp-json/wc/v3/products/${id}`;
+  const consumerKey = "ck_aee921e5ee410206f5de6b254d4638cfb2154b77";
+  const consumerSecret = "cs_7182e2d71bebc8b0454b2f8a18ae5c6ca622c67f";
 
   try {
     const response = await fetch(apiUrl, {
@@ -38,9 +38,9 @@ export async function productFromApi(id, errorContainer) {
 
 export async function fetchProducts() {
   const apiUrl =
-    "https://aurover.no/rainydays/app/public/wp-json/wc/v3/products?per_page=100";
-  const consumerKey = "ck_bd67798e0bf1225148dbe5bb134cc0d30674bdac";
-  const consumerSecret = "cs_d8ddf0a454a1bcc37cdb5624675fd1b814ea7904";
+    "https://rainydays-api.annikaeldoy.no/wp-json/wc/v3/products?per_page=100";
+  const consumerKey = "ck_aee921e5ee410206f5de6b254d4638cfb2154b77";
+  const consumerSecret = "cs_7182e2d71bebc8b0454b2f8a18ae5c6ca622c67f";
 
   try {
     const response = await fetch(apiUrl, {
