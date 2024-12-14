@@ -8,4 +8,4 @@ const id = getIdQueryParameter();
 const product = await productFromApi(id, ".product-specific__details");
 insertProductImage(product);
 insertProductText(product);
-setPageTitle(product.title);
+setPageTitle(product.name);
