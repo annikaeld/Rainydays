@@ -52,6 +52,3 @@ The content is on a WordPress site, and is fetched via API.
 
 The project page is on https://github.com/annikaeld/Rainydays. Raise an [issue](https://github.com/annikaeld/Rainydays/issues) on the project page if you have any feedback.
 
-## Acknowledgments
-
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
