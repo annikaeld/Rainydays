@@ -10,7 +10,7 @@ export async function renderProductList(gender) {
       let product = data[i];
       if (product.categories[0].name === gender) {
         productList.innerHTML += `<div class="product">
-     <a href="jacket-specific.html?id=${product.id}">
+     <a href="jacket-specific?id=${product.id}">
        <img src="${product.images[0].src}" alt="${product.images[0].alt}">
        <p>${product.name}</p>
        <p>${product.price} kr</p>

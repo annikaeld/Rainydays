@@ -1,0 +1,326 @@
+[
+  {
+    "id": 1,
+    "name": "Expedition Jacket - Men's",
+    "slug": "expedition-jacket-mens",
+    "price": "1299",
+    "regular_price": "1299",
+    "sale_price": "",
+    "on_sale": false,
+    "description": "Designed for extreme conditions, this jacket provides ultimate protection against wind and rain.",
+    "short_description": "Ultimate protection for extreme weather conditions.",
+    "categories": [
+      {
+        "id": 10,
+        "name": "Men",
+        "slug": "men"
+      }
+    ],
+    "images": [
+      {
+        "id": 101,
+        "src": "images/jacketes/blue-jacket.jpg",
+        "alt": "Expedition Jacket - Men's"
+      }
+    ],
+    "attributes": [],
+    "stock_status": "instock"
+  },
+  {
+    "id": 2,
+    "name": "Trail Runner Jacket - Men's",
+    "slug": "trail-runner-jacket-mens",
+    "price": "999",
+    "regular_price": "999",
+    "sale_price": "",
+    "on_sale": false,
+    "description": "Lightweight and breathable jacket perfect for running in rainy weather.",
+    "short_description": "Lightweight rain protection for active pursuits.",
+    "categories": [
+      {
+        "id": 10,
+        "name": "Men",
+        "slug": "men"
+      }
+    ],
+    "images": [
+      {
+        "id": 102,
+        "src": "images/jacketes/jacket-black.jpg",
+        "alt": "Trail Runner Jacket - Men's"
+      }
+    ],
+    "attributes": [],
+    "stock_status": "instock"
+  },
+  {
+    "id": 3,
+    "name": "Urban Commuter Jacket - Men's",
+    "slug": "urban-commuter-jacket-mens",
+    "price": "1099",
+    "regular_price": "1099",
+    "sale_price": "",
+    "on_sale": false,
+    "description": "Stylish and functional jacket for city commuting in all weather.",
+    "short_description": "Urban style meets weather protection.",
+    "categories": [
+      {
+        "id": 10,
+        "name": "Men",
+        "slug": "men"
+      }
+    ],
+    "images": [
+      {
+        "id": 103,
+        "src": "images/jacketes/jacket-bright-turquise.jpg",
+        "alt": "Urban Commuter Jacket - Men's"
+      }
+    ],
+    "attributes": [],
+    "stock_status": "instock"
+  },
+  {
+    "id": 4,
+    "name": "Mountain Guide Jacket - Men's",
+    "slug": "mountain-guide-jacket-mens",
+    "price": "1499",
+    "regular_price": "1499",
+    "sale_price": "",
+    "on_sale": false,
+    "description": "Professional-grade jacket for serious mountaineering and hiking.",
+    "short_description": "Professional mountaineering protection.",
+    "categories": [
+      {
+        "id": 10,
+        "name": "Men",
+        "slug": "men"
+      }
+    ],
+    "images": [
+      {
+        "id": 104,
+        "src": "images/jacketes/jacket-dusty-blue.jpg",
+        "alt": "Mountain Guide Jacket - Men's"
+      }
+    ],
+    "attributes": [],
+    "stock_status": "instock"
+  },
+  {
+    "id": 5,
+    "name": "Storm Warrior Jacket - Men's",
+    "slug": "storm-warrior-jacket-mens",
+    "price": "1199",
+    "regular_price": "1199",
+    "sale_price": "",
+    "on_sale": false,
+    "description": "Advanced weather-resistant jacket for intense outdoor adventures.",
+    "short_description": "Advanced weather resistance technology.",
+    "categories": [
+      {
+        "id": 10,
+        "name": "Men",
+        "slug": "men"
+      }
+    ],
+    "images": [
+      {
+        "id": 109,
+        "src": "images/jacketes/jacket-orange.jpg",
+        "alt": "Storm Warrior Jacket - Men's"
+      }
+    ],
+    "attributes": [],
+    "stock_status": "instock"
+  },
+  {
+    "id": 6,
+    "name": "Nomad Traveler Jacket - Men's",
+    "slug": "nomad-traveler-jacket-mens",
+    "price": "1099",
+    "regular_price": "1099",
+    "sale_price": "",
+    "on_sale": false,
+    "description": "Versatile jacket perfect for explorers and world travelers.",
+    "short_description": "Perfect for global adventures.",
+    "categories": [
+      {
+        "id": 10,
+        "name": "Men",
+        "slug": "men"
+      }
+    ],
+    "images": [
+      {
+        "id": 110,
+        "src": "images/jacketes/yellow-jacket.jpg",
+        "alt": "Nomad Traveler Jacket - Men's"
+      }
+    ],
+    "attributes": [],
+    "stock_status": "instock"
+  },
+  {
+    "id": 7,
+    "name": "Alpine Pro Jacket - Women's",
+    "slug": "alpine-pro-jacket-womens",
+    "price": "1399",
+    "regular_price": "1399",
+    "sale_price": "",
+    "on_sale": false,
+    "description": "Premium women's jacket designed for alpine adventures and harsh weather.",
+    "short_description": "Premium alpine weather protection.",
+    "categories": [
+      {
+        "id": 11,
+        "name": "Women",
+        "slug": "women"
+      }
+    ],
+    "images": [
+      {
+        "id": 105,
+        "src": "images/jacketes/jacket-dusty-rose.jpg",
+        "alt": "Alpine Pro Jacket - Women's"
+      }
+    ],
+    "attributes": [],
+    "stock_status": "instock"
+  },
+  {
+    "id": 8,
+    "name": "City Explorer Jacket - Women's",
+    "slug": "city-explorer-jacket-womens",
+    "price": "1099",
+    "regular_price": "1099",
+    "sale_price": "",
+    "on_sale": false,
+    "description": "Elegant and practical jacket for urban exploration in any weather.",
+    "short_description": "Urban elegance meets functionality.",
+    "categories": [
+      {
+        "id": 11,
+        "name": "Women",
+        "slug": "women"
+      }
+    ],
+    "images": [
+      {
+        "id": 106,
+        "src": "images/jacketes/jacket-lime.jpg",
+        "alt": "City Explorer Jacket - Women's"
+      }
+    ],
+    "attributes": [],
+    "stock_status": "instock"
+  },
+  {
+    "id": 9,
+    "name": "Summit Shell Jacket - Women's",
+    "slug": "summit-shell-jacket-womens",
+    "price": "1299",
+    "regular_price": "1299",
+    "sale_price": "",
+    "on_sale": false,
+    "description": "Technical shell jacket for peak performance in extreme conditions.",
+    "short_description": "Technical performance for serious adventurers.",
+    "categories": [
+      {
+        "id": 11,
+        "name": "Women",
+        "slug": "women"
+      }
+    ],
+    "images": [
+      {
+        "id": 107,
+        "src": "images/jacketes/jacket-orange.jpg",
+        "alt": "Summit Shell Jacket - Women's"
+      }
+    ],
+    "attributes": [],
+    "stock_status": "instock"
+  },
+  {
+    "id": 10,
+    "name": "Trail Blazer Jacket - Women's",
+    "slug": "trail-blazer-jacket-womens",
+    "price": "999",
+    "regular_price": "999",
+    "sale_price": "",
+    "on_sale": false,
+    "description": "Lightweight and versatile jacket perfect for hiking and trail running.",
+    "short_description": "Lightweight versatility for the trails.",
+    "categories": [
+      {
+        "id": 11,
+        "name": "Women",
+        "slug": "women"
+      }
+    ],
+    "images": [
+      {
+        "id": 108,
+        "src": "images/jacketes/jacket-white.jpg",
+        "alt": "Trail Blazer Jacket - Women's"
+      }
+    ],
+    "attributes": [],
+    "stock_status": "instock"
+  },
+  {
+    "id": 11,
+    "name": "Glacier Peak Jacket - Women's",
+    "slug": "glacier-peak-jacket-womens",
+    "price": "1499",
+    "regular_price": "1499",
+    "sale_price": "",
+    "on_sale": false,
+    "description": "Premium insulated jacket designed for arctic conditions and high-altitude expeditions.",
+    "short_description": "Premium insulation for extreme cold.",
+    "categories": [
+      {
+        "id": 11,
+        "name": "Women",
+        "slug": "women"
+      }
+    ],
+    "images": [
+      {
+        "id": 111,
+        "src": "images/jacketes/jacket-bright-turquise.jpg",
+        "alt": "Glacier Peak Jacket - Women's"
+      }
+    ],
+    "attributes": [],
+    "stock_status": "instock"
+  },
+  {
+    "id": 12,
+    "name": "Adventurer's Choice Jacket - Women's",
+    "slug": "adventurers-choice-jacket-womens",
+    "price": "1199",
+    "regular_price": "1199",
+    "sale_price": "",
+    "on_sale": false,
+    "description": "Durable and stylish jacket ideal for outdoor enthusiasts of all skill levels.",
+    "short_description": "For outdoor enthusiasts everywhere.",
+    "categories": [
+      {
+        "id": 11,
+        "name": "Women",
+        "slug": "women"
+      }
+    ],
+    "images": [
+      {
+        "id": 112,
+        "src": "images/jacketes/jacket-dusty-blue.jpg",
+        "alt": "Adventurer's Choice Jacket - Women's"
+      }
+    ],
+    "attributes": [],
+    "stock_status": "instock"
+  }
+]

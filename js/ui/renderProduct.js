@@ -20,5 +20,5 @@ export function insertProductText(product) {
     <p class="description-paragraph">
       ${product.description}
     </p>
-    <a href="check-out.html?id=${product.id}" class="cta" onclick="addToCart(${product.id})">Add to cart</a>`;
+    <a href="check-out?id=${product.id}" class="cta" onclick="addToCart(${product.id})">Add to cart</a>`;
 }
