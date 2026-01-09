@@ -42,7 +42,7 @@ Converting the site into a headless CMS, fetching products from a WordPress/WooC
 
 The site was originally built with product images and information statically added directly to the HTML/CSS.  At a later stage (September 2024), the architecture was migrated to a headless CMS approach, where product data is dynamically fetched from a WordPress/WooCommerce API, allowing for easier content management and scalability.
 
-**Note:** The WooCommerce backend is no longer active, so the live site will not display products.  The code demonstrates the API integration implementation. 
+**Note:** The WooCommerce backend is no longer active, so a static alternative is built to render items.  The code demonstrates the API integration implementation. 
 
 ## Getting Started
 
